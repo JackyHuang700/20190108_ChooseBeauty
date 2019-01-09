@@ -75,3 +75,44 @@ import '../scss/main.scss'
 // console.log(y); // 2
 // console.log(z); // { a: 3, b: 4 }
 // [5, 6].map(n => console.log(n));
+
+var mq767 = 767
+
+// hover navbar
+$('.dropdown').hover(function(){ 
+  if ($(window).width() > mq767) $('.dropdown-toggle', this).trigger('click'); 
+});
+
+//
+jQuery(window).on('scroll', function() {
+  (function($) {
+      stickyHeader();
+      // OnePageMenuScroll();        
+  })(jQuery);
+});
+
+// navbar stricky
+function stickyHeader() {
+  if ($('.stricky').length) {
+      var strickyScrollPos = 100;
+      strickyScrollPos = 40;
+      if ($(window).scrollTop() > strickyScrollPos) {
+          $('.stricky').removeClass('slideIn animated');
+          $('.stricky').addClass('stricky-fixed slideInDown animated');
+          $('.scrollToTop').fadeIn(500);
+      // } else if ($(this).scrollTop() <= strickyScrollPos) {
+      } else {
+          $('.stricky').removeClass('stricky-fixed slideInDown animated');
+          $('.stricky').addClass('slideIn animated');
+          $('.scrollToTop').fadeOut(500);
+      }
+  };
+}
+
+// 
+$('.scrollToTop').click(function () {
+  $("html, body").animate({
+      scrollTop: 0
+  }, 600);
+  return false;
+});

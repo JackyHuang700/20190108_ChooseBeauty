@@ -1,5 +1,84 @@
-$color: #faa;
+$mq767: 767px;
 
-#app{
-  color: $color;
+$templateColor: #eeb118;
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding-top: 40px;
+  color: white;
+
+  &.stricky-fixed{
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 51;
+    position: fixed;
+    margin: 0;
+    background-color: rgb(34, 34, 34);
+    padding: 0;
+  }
+}
+
+
+
+// navbar選單
+.dropdown-menu.dropdown-menu{
+  transition-property: opacity, visibility;
+  transition-duration: .4s;
+  transition-timing-function: ease;
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+
+  @media screen and (max-width: $mq767){
+    display: none;
+  }
+
+
+  &.show{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// scroll to top
+.scrollToTop{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  cursor: pointer;
+  line-height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 23px 42px;
+  border-radius: 50%;
+  background-color: $templateColor;
+
+  >*{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+// 單位...
+.bgcRed{
+  background-color: red;
+}
+
+.h100vh{
+  height: 100vh;
 }

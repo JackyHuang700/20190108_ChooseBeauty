@@ -13,8 +13,16 @@
     />
     <% } %> <% } %>
 
-    <!-- path是相對於運行webpack的位置 -->
     <%- include ClientApp/ejs/index_2/public/header.ejs %>
+
+    <section id="banner" class="bgcRed h100vh">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptate, quisquam voluptatem aliquid accusantium accusamus reprehenderit omnis qui ab tempore quia cupiditate aliquam sit dignissimos debitis! Aliquid, laboriosam laborum! Optio.
+      Illum itaque dolores consectetur delectus obcaecati accusamus, adipisci, laudantium quo possimus voluptatibus iste quos, maxime minima. Officia, harum eaque atque eveniet nulla vero inventore quasi eum. Sint, iure iste. Quasi.
+      Aut sapiente suscipit voluptates autem odit, repellendus est adipisci labore ipsa soluta cumque reiciendis illo incidunt repudiandae, delectus, vel assumenda quibusdam amet fugiat laudantium aliquam accusamus beatae qui! Eius, ea!
+      Tempora aspernatur, quisquam natus eius delectus id eos ad non voluptas minima reprehenderit dicta quaerat autem, earum sequi hic! Odit distinctio, nihil magni culpa sapiente eos accusamus nobis in quas!
+    </section>
+
+
     <!-- Here is our page's main content -->
     <main>
       <!-- It contains an article -->
@@ -61,8 +69,8 @@
       </article>
     </main>
 
-    <%- include ClientApp/ejs/index_2/public/footer.ejs %> <%- include
-    ClientApp/ejs/index_2/public/script.ejs %>
+    <%- include ClientApp/ejs/index_2/public/footer.ejs %>
+    <%- include ClientApp/ejs/index_2/public/script.ejs %>
 
     <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
 
@@ -73,8 +81,6 @@
     %>
     <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
     <% } %> <% } %>
-
-    <!-- path是相對於運行webpack的位置 -->
-    <%- include ClientApp/ejs/index_2/public/footer.ejs %>
+    
   </body>
 </html>
