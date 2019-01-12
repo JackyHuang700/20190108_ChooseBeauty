@@ -1,6 +1,31 @@
+$mq576: 576px;
 $mq767: 767px;
+$mq991: 991px;
 
 $templateColor: #eeb118;
+
+
+%common{
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+
+@mixin commonH2{
+  h2{
+    font-size: 38px;
+    @extend %common;
+  }
+}
+
+@mixin commonH2Style2{
+  h2{
+    font-size: 30px;
+    @extend %common;
+  }
+}
 
 html, body{
   width: 100%;
@@ -13,7 +38,7 @@ html, body{
   left: 0;
   width: 100%;
   z-index: 50;
-  padding-top: 40px;
+  padding: 40px 70px 0 70px;
   color: white;
 
   &.stricky-fixed{
@@ -31,6 +56,21 @@ html, body{
 
 
 // navbar選單
+.navbar-light.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light.navbar-light .navbar-nav .nav-link{
+
+  color: white;
+  transition: .3s color ease;
+  font-size: 15px;
+  margin-left: 40px;
+
+  &:hover, &:focus{
+    color: $templateColor;
+  }
+
+}
+
 .dropdown-menu.dropdown-menu{
   transition-property: opacity, visibility;
   transition-duration: .4s;
@@ -38,6 +78,14 @@ html, body{
   visibility: hidden;
   opacity: 0;
   display: block;
+  border-top: 4px solid $templateColor;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  padding: 0;
+  background-color: #222;
+  color: white;
+
 
   @media screen and (max-width: $mq767){
     display: none;
@@ -48,7 +96,25 @@ html, body{
     visibility: visible;
     opacity: 1;
   }
+
+  .dropdown-item{
+
+    // padding: 0 18px;
+    color: white;
+    transition-duration: .3s;
+    transition-property: background-color, color;
+    transition-timing-function: ease;
+
+    &:hover{
+      background-color: $templateColor;
+    }
+  }
 }
+
+.navbar-light.navbar-light .navbar-toggler{
+  border-color:white;
+}
+
 
 // scroll to top
 .scrollToTop{
@@ -74,6 +140,218 @@ html, body{
   }
 }
 
+.logo{
+  width: 100%;
+  height: 100%;
+  max-width: 90px;
+  padding: 0;
+
+  > img{
+    width: 100%;
+  }
+}
+
+// hero
+.hero{
+  min-height: 925px;
+  // height: 100%;
+  width: 100%;
+  display: block;
+  background-image: url('/wwwroot/images/heroBG.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// 活動照片跑馬燈
+// 選美佳麗
+.activityPicture,
+.chooseBeauty{
+  
+    @include commonH2;
+  
+}
+
+// 最新消息動態
+.news{
+  
+  @include commonH2;
+  
+  .nav.nav-tabs{
+    
+    border-bottom-width: 0;
+    
+    .nav-link{
+      
+      background-color: rgb(239, 239, 244);
+      color: black;
+      padding: 10px;
+      width: 100px;
+      text-align: center;
+      font-size: 16px;
+      
+
+      &.active{
+        border-width: 0;
+        background-color: $templateColor;
+        color: white;
+        padding: 10px;
+        font-weight: 600;
+      }
+    }
+
+    
+  }
+
+  .tab-content{
+    .newsTable{
+      th:nth-child(1){
+        width: 90px;
+        // max-width: 48px;
+      }
+      th:nth-child(2){
+        width: calc(100% - 48px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      th, td{
+        padding: 10px 0 5px;
+        border-top-width: 0;
+      }
+    }
+  }
+}
+
+// 商業贊助
+.businessSupport{
+  @include commonH2Style2;
+
+  .businessSupportInfo{
+
+    max-width: 247px;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    box-shadow: 2px 2px 10px 3px rgba(200, 200, 200, 0.5);
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    // margin: 0 25px 20px 0;
+    margin: 0 auto 20px;
+
+    @media screen and (max-width: $mq576){
+      display: block;
+    }
+
+    .img{
+
+      > img{
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .businessSupportName{
+    color: $templateColor;
+    margin: 20px 0 0;
+    font-size: 16px;
+  }
+}
+
+// footer
+.footer{
+  height: auto;
+  background-color: #f7f7f7;
+  vertical-align: middle;
+  padding: 16px 0;
+}
+
+// owl-carousel
+.owl-carousel.owl-carousel{
+  .item {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      max-width: 110px;
+      margin: 0 auto;
+    }
+  }
+
+
+  .owl-nav{
+    
+    @media screen and (max-width: $mq991){
+      display: block;
+      width: 100%;
+      max-width: 110px;
+      margin: 0 auto;
+      overflow: hidden;
+      clear: both;
+    }
+
+    .owl-prev, .owl-next{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+
+      @media screen and (max-width: $mq991){
+        position: relative;
+        transform: none;
+        top: 0;
+      }
+    }
+
+    .owl-prev{
+      left: 0;
+      
+      @media screen and (max-width: $mq991){
+        float: left;
+      }
+    }
+    .owl-next{
+      right: 0;
+
+      @media screen and (max-width: $mq991){
+        float: right;
+      }
+    }
+  }
+
+  .owl-nav [class*=owl-]{
+    &:hover{
+      transition-property: color, background-color;
+      transition-duration: .3s;
+      transition-timing-function: ease;
+      background-color: $templateColor;
+
+      .next{
+        color: white;
+      }
+    }
+
+    .next{
+      color: $templateColor;
+    }
+  }
+}
+.owl-theme.owl-theme .owl-dots .owl-dot{
+  
+  
+  &.active, &:hover{
+    span{
+      transition: background-color .3s ease;
+      background: $templateColor;
+    }
+  }
+}
+
 // 單位...
 .bgcRed{
   background-color: red;
@@ -81,4 +359,8 @@ html, body{
 
 .h100vh{
   height: 100vh;
+}
+
+.chooseBeautyColor{
+  color: $templateColor;
 }

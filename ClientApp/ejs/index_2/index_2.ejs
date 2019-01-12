@@ -15,59 +15,132 @@
 
     <%- include ClientApp/ejs/index_2/public/header.ejs %>
 
-    <section id="banner" class="bgcRed h100vh">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptate, quisquam voluptatem aliquid accusantium accusamus reprehenderit omnis qui ab tempore quia cupiditate aliquam sit dignissimos debitis! Aliquid, laboriosam laborum! Optio.
-      Illum itaque dolores consectetur delectus obcaecati accusamus, adipisci, laudantium quo possimus voluptatibus iste quos, maxime minima. Officia, harum eaque atque eveniet nulla vero inventore quasi eum. Sint, iure iste. Quasi.
-      Aut sapiente suscipit voluptates autem odit, repellendus est adipisci labore ipsa soluta cumque reiciendis illo incidunt repudiandae, delectus, vel assumenda quibusdam amet fugiat laudantium aliquam accusamus beatae qui! Eius, ea!
-      Tempora aspernatur, quisquam natus eius delectus id eos ad non voluptas minima reprehenderit dicta quaerat autem, earum sequi hic! Odit distinctio, nihil magni culpa sapiente eos accusamus nobis in quas!
+    <section class="hero"></section>
+
+
+    <section class="activityPicture">
+      <div class="container">
+        <div class="row bg-white">
+          <div class="col-12">
+            <h2>活動照片</h2>
+          </div>
+          <div class="col-12">
+            <div class="owl-carousel owl-theme">
+              <div class="item"><img src="https://picsum.photos/200/300" alt=""></div>
+              <div class="item"><img src="https://picsum.photos/200/300" alt=""></div>
+              <div class="item"><img src="https://picsum.photos/200/300" alt=""></div>
+              <div class="item"><img src="https://picsum.photos/200/300" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </section>
+    
+    <sectioin class="news">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>最新消息動態</h2>
+          </div>
+          <div class="col-12">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">公告</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <table class="table newsTable">
+                        <!-- <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead> -->
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="chooseBeautyColor">2019-01-11</th>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatibus cum commodi non unde laudantium, ipsa fugiat qui, quam excepturi sit dolores nobis neque iusto, molestias suscipit quaerat autem amet?</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </sectioin>
+
+    <section class="chooseBeauty">
+        <div class="container">
+            <div class="row bg-white">
+              <div class="col-12">
+                <h2>活動照片</h2>
+              </div>
+              <div class="col-12">
+                <div class="owl-carousel owl-theme">
+                  <div class="item"><img src="https://picsum.photos/200/300" alt=""></div>
+                  <div class="item"><img src="https://picsum.photos/200/300" alt=""></div>
+                  <div class="item"><img src="https://picsum.photos/200/300" alt=""></div>
+                  <div class="item"><img src="https://picsum.photos/200/300" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>  
     </section>
 
+    <section class="businessSupport">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>協辦單位及贊助商</h2>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-sm-3 text-center">
+                <h2>主辦單位</h2>
+                <a class="businessSupportInfo">
+                  <div class="img">
+                      <img src="https://picsum.photos/300/220" alt="">
+                  </div>
+                  <p class="businessSupportName">泰睿思股份有限公司</p>
+                </a>
+              </div>
+              <div class="col-sm-9 text-center">
+                <h2>協辦單位</h2>
+                <a class="businessSupportInfo">
+                    <div class="img">
+                        <img src="https://picsum.photos/300/220" alt="">
+                    </div>
+                    <p class="businessSupportName">泰睿思股份有限公司</p>
+                  </a>
+              </div>
+              <div class="col-sm-12 mt-4 text-center">
+                <h2 class="text-center">贊助商</h2>
+                <a class="businessSupportInfo">
+                    <div class="img">
+                        <img src="https://picsum.photos/300/220" alt="">
+                    </div>
+                    <p class="businessSupportName">泰睿思股份有限公司</p>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Here is our page's main content -->
-    <main>
-      <!-- It contains an article -->
-      <article>
-        <h2>Article heading</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
-          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
-          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
-          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
-          congue enim, ut porta lorem lacinia consectetur.
-        </p>
-
-        <h3>subsection</h3>
-
-        <p>
-          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
-          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
-        </p>
-
-        <p>
-          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
-          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
-          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
-        </p>
-
-        <h3>Another subsection</h3>
-
-        <p>
-          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-          soclis natoque penatibus et manis dis parturient montes, nascetur
-          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
-          facilisis semper ac in est.
-        </p>
-
-        <p>
-          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
-          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
-          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
-          diam iaculis velit, is fringille sem nunc vet mi.
-        </p>
-      </article>
-    </main>
 
     <%- include ClientApp/ejs/index_2/public/footer.ejs %>
     <%- include ClientApp/ejs/index_2/public/script.ejs %>
@@ -84,3 +157,5 @@
     
   </body>
 </html>
+
+

@@ -116,3 +116,35 @@ $('.scrollToTop').click(function () {
   }, 600);
   return false;
 });
+
+// owlcarousel
+$('.owl-carousel').owlCarousel({
+    loop:true,
+ 
+    margin:10,
+    responsiveClass:true,
+    nav:true,
+    items: 1,
+    navText: [
+        (
+            '<span class="next">' +
+            '  <i class="fas fa-arrow-left"></i>' +
+            '</span>'
+        ),
+        (
+            '<span class="next">' +
+            '  <i class="fas fa-arrow-right"></i>' +
+            '</span>'
+        )],
+    responsive:{
+        1000:{
+            items:1,
+            loop:true
+        }
+    }
+})
+
+
+// animateOut: 'fadeOut',
+// animateIn: 'fadeIn',
+// nav:true,
