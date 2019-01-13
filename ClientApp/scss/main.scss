@@ -9,8 +9,21 @@ $templateColor: #eeb118;
   color: #222;
   font-weight: 600;
   text-align: center;
-  margin-top: 75px;
-  margin-bottom: 50px;
+  display: inline-block;
+
+  &::after{
+    content: '';
+    display: block;
+    width: 50%;
+    height: 5px;
+    border-radius: 5px;
+    margin: 16px auto 32px;
+    background-color: $templateColor;
+
+    @media screen and (max-width: $mq576){
+      width: 40%;
+    }
+  }
 }
 
 @mixin commonH2{
@@ -27,9 +40,19 @@ $templateColor: #eeb118;
   }
 }
 
+@mixin sectionDistance{
+  padding: 75px 0;
+}
+
+
+
 html, body{
   width: 100%;
   height: 100%;
+}
+
+body.body{
+  font-weight: 600;
 }
 
 .header{
@@ -40,6 +63,10 @@ html, body{
   z-index: 50;
   padding: 40px 70px 0 70px;
   color: white;
+
+  @media screen and (max-width: $mq576){
+    padding: 0;
+  }
 
   &.stricky-fixed{
     top: 0;
@@ -56,6 +83,7 @@ html, body{
 
 
 // navbar選單
+
 .navbar-light.navbar-light .navbar-nav .show>.nav-link,
 .navbar-light.navbar-light .navbar-nav .active>.nav-link,
 .navbar-light.navbar-light .navbar-nav .nav-link{
@@ -114,6 +142,9 @@ html, body{
 .navbar-light.navbar-light .navbar-toggler{
   border-color:white;
 }
+.navbar-toggler-icon.navbar-toggler-icon.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 
 
 // scroll to top
@@ -130,8 +161,13 @@ html, body{
   cursor: pointer;
   line-height: 50px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 23px 42px;
-  border-radius: 50%;
+  border-radius: 10px;
   background-color: $templateColor;
+  transition: transform .3s ease;
+
+  &:hover{
+    transform: scale(1.1);
+  }
 
   >*{
     display: inline-block;
@@ -161,6 +197,28 @@ html, body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+
+  .particlesJs{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+  }
+
+  .hreoBox{
+    padding-top: 200px;
+  }
+
+  .heroImg{
+    max-width: 510px;
+    // height: 565px;
+  }
+
 }
 
 // 活動照片跑馬燈
@@ -169,14 +227,14 @@ html, body{
 .chooseBeauty{
   
     @include commonH2;
-  
+    @include sectionDistance;
 }
 
 // 最新消息動態
 .news{
   
   @include commonH2;
-  
+  @include sectionDistance;
   .nav.nav-tabs{
     
     border-bottom-width: 0;
@@ -227,6 +285,15 @@ html, body{
 // 商業贊助
 .businessSupport{
   @include commonH2Style2;
+  @include sectionDistance;
+
+  .block{
+    text-align: left;
+
+    @media screen and (max-width: $mq576){
+      text-align: center;
+    }
+  }
 
   .businessSupportInfo{
 
@@ -265,9 +332,11 @@ html, body{
 // footer
 .footer{
   height: auto;
-  background-color: #f7f7f7;
+  background-color: rgba(27, 54, 100, 0.84);
   vertical-align: middle;
   padding: 16px 0;
+  color: $templateColor;
+  font-weight: 700;
 }
 
 // owl-carousel
@@ -300,6 +369,13 @@ html, body{
       top: 50%;
       transform: translateY(-50%);
       font-size: 20px;
+      margin: 0;
+      width: 50px;
+      height: 50px;
+
+      > *{
+        font-size: 30px;
+      }
 
       @media screen and (max-width: $mq991){
         position: relative;
@@ -310,14 +386,15 @@ html, body{
 
     .owl-prev{
       left: 0;
-      
+      margin: 0 0 0 5px;
+
       @media screen and (max-width: $mq991){
         float: left;
       }
     }
     .owl-next{
       right: 0;
-
+      margin: 0 5px 0 0;
       @media screen and (max-width: $mq991){
         float: right;
       }
@@ -352,6 +429,43 @@ html, body{
   }
 }
 
+// typedjs
+.type-wrap{
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    width: 100%;
+    color: white;
+  }
+
+  .visually-hidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+  }
+
+  /* code for animated blinking cursor */
+  .typed-cursor{
+    opacity: 1;
+    font-weight: 100;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+  }
+}
+
 // 單位...
 .bgcRed{
   background-color: red;
@@ -364,3 +478,20 @@ html, body{
 .chooseBeautyColor{
   color: $templateColor;
 }
+
+.p75-0-50{
+  padding: 75px 0 50px;
+
+  @media screen and (max-width: $mq576){
+    padding: 0;
+  }
+}
+
+.bgSection{
+  background-image: url('/wwwroot/images/bgSection.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+

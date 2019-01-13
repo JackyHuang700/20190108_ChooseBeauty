@@ -10,7 +10,7 @@
 <meta name="copyright" content="mTERRACE">
 <meta name="URL" content="https://www.mterrace.com.tw/"> 
   </head>
-  <body>
+  <body class="body">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
@@ -62,14 +62,29 @@
 </header>
 
 
-    <section class="hero"></section>
+    <section class="hero">
+      <div class="particlesJs"  id="particles-js"></div>
+      <div class="container hreoBox">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="heroImg"><img src="https://picsum.photos/500/500" alt=""></div>
+          </div>
+          <div class="col-sm-6">
+              <div class="type-wrap"><h1>
+              <span class="visually-hidden">mTERRACE</span>
+              <span role="presentation" aria-hidden="true"></span>
+              </h1></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <section class="activityPicture">
       <div class="container">
         <div class="row bg-white">
-          <div class="col-12">
-            <h2>活動照片</h2>
+          <div class="col-12 p75-0-50 text-center">
+            <h2><span>活動照片</span></h2>
           </div>
           <div class="col-12">
             <div class="owl-carousel owl-theme">
@@ -83,11 +98,11 @@
       </div>  
     </section>
     
-    <sectioin class="news">
+    <sectioin class="news bgSection">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h2>最新消息動態</h2>
+          <div class="col-12 p75-0-50 text-center">
+            <h2><span>最新消息動態</span></h2>
           </div>
           <div class="col-12">
               <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -132,8 +147,8 @@
     <section class="chooseBeauty">
         <div class="container">
             <div class="row bg-white">
-              <div class="col-12">
-                <h2>活動照片</h2>
+              <div class="col-12 p75-0-50 text-center">
+                <h2><span>活動照片</span></h2>
               </div>
               <div class="col-12">
                 <div class="owl-carousel owl-theme">
@@ -147,16 +162,20 @@
           </div>  
     </section>
 
-    <section class="businessSupport">
+    <section class="businessSupport bgSection">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h2>協辦單位及贊助商</h2>
+          <div class="col-12 text-center">
+            <h2><span>協辦單位及贊助商</span></h2>
           </div>
           <div class="col-12">
             <div class="row">
-              <div class="col-sm-3 text-center">
-                <h2>主辦單位</h2>
+              <div class="col-sm-3 p75-0-50 text-center text-center">
+                <div class="row">
+                  <div class="col-12">
+                    <h2><span>主辦單位</span></h2>
+                  </div>
+                </div>
                 <a class="businessSupportInfo">
                   <div class="img">
                       <img src="https://picsum.photos/300/220" alt="">
@@ -164,8 +183,12 @@
                   <p class="businessSupportName">泰睿思股份有限公司</p>
                 </a>
               </div>
-              <div class="col-sm-9 text-center">
-                <h2>協辦單位</h2>
+              <div class="col-sm-9 p75-0-50 block">
+                <div class="row">
+                  <div class="col-12">
+                    <h2><span>協辦單位</span></h2>
+                  </div>
+                </div>
                 <a class="businessSupportInfo">
                     <div class="img">
                         <img src="https://picsum.photos/300/220" alt="">
@@ -174,7 +197,11 @@
                   </a>
               </div>
               <div class="col-sm-12 mt-4 text-center">
-                <h2 class="text-center">贊助商</h2>
+                <div class="row">
+                  <div class="col-12">
+                    <h2 class="text-center"><span>贊助商</span></h2>
+                  </div>
+                </div>
                 <a class="businessSupportInfo">
                     <div class="img">
                         <img src="https://picsum.photos/300/220" alt="">
@@ -191,7 +218,7 @@
 
     <!-- And here is our main footer that is used across all the pages of our website -->
 <footer class="footer text-center">
-    Copyright © 2019泰睿思股份有限公司 版權所有
+    Copyright © 2019 泰睿思股份有限公司 版權所有
 </footer>
 
 
@@ -210,6 +237,12 @@
 
 <!-- owlcarousel -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- particles -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- sfd -->
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/typed.min.js"></script>
 
     <script src="wwwroot/vendor/dll.vendor.js"></script>
 

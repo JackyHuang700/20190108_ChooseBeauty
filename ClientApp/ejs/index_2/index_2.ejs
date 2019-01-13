@@ -3,7 +3,7 @@
   <head>
     <% include ClientApp/ejs/index_2/public/headerTag.ejs %>
   </head>
-  <body>
+  <body class="body">
     <%- include ClientApp/ejs/index_2/public/style.ejs %>
     <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var css in
     htmlWebpackPlugin.files.css) { %>
@@ -15,14 +15,29 @@
 
     <%- include ClientApp/ejs/index_2/public/header.ejs %>
 
-    <section class="hero"></section>
+    <section class="hero">
+      <div class="particlesJs"  id="particles-js"></div>
+      <div class="container hreoBox">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="heroImg"><img src="https://picsum.photos/500/500" alt=""></div>
+          </div>
+          <div class="col-sm-6">
+              <div class="type-wrap"><h1>
+              <span class="visually-hidden">mTERRACE</span>
+              <span role="presentation" aria-hidden="true"></span>
+              </h1></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <section class="activityPicture">
       <div class="container">
         <div class="row bg-white">
-          <div class="col-12">
-            <h2>活動照片</h2>
+          <div class="col-12 p75-0-50 text-center">
+            <h2><span>活動照片</span></h2>
           </div>
           <div class="col-12">
             <div class="owl-carousel owl-theme">
@@ -36,11 +51,11 @@
       </div>  
     </section>
     
-    <sectioin class="news">
+    <sectioin class="news bgSection">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h2>最新消息動態</h2>
+          <div class="col-12 p75-0-50 text-center">
+            <h2><span>最新消息動態</span></h2>
           </div>
           <div class="col-12">
               <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -85,8 +100,8 @@
     <section class="chooseBeauty">
         <div class="container">
             <div class="row bg-white">
-              <div class="col-12">
-                <h2>活動照片</h2>
+              <div class="col-12 p75-0-50 text-center">
+                <h2><span>活動照片</span></h2>
               </div>
               <div class="col-12">
                 <div class="owl-carousel owl-theme">
@@ -100,16 +115,20 @@
           </div>  
     </section>
 
-    <section class="businessSupport">
+    <section class="businessSupport bgSection">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h2>協辦單位及贊助商</h2>
+          <div class="col-12 text-center">
+            <h2><span>協辦單位及贊助商</span></h2>
           </div>
           <div class="col-12">
             <div class="row">
-              <div class="col-sm-3 text-center">
-                <h2>主辦單位</h2>
+              <div class="col-sm-3 p75-0-50 text-center text-center">
+                <div class="row">
+                  <div class="col-12">
+                    <h2><span>主辦單位</span></h2>
+                  </div>
+                </div>
                 <a class="businessSupportInfo">
                   <div class="img">
                       <img src="https://picsum.photos/300/220" alt="">
@@ -117,8 +136,12 @@
                   <p class="businessSupportName">泰睿思股份有限公司</p>
                 </a>
               </div>
-              <div class="col-sm-9 text-center">
-                <h2>協辦單位</h2>
+              <div class="col-sm-9 p75-0-50 block">
+                <div class="row">
+                  <div class="col-12">
+                    <h2><span>協辦單位</span></h2>
+                  </div>
+                </div>
                 <a class="businessSupportInfo">
                     <div class="img">
                         <img src="https://picsum.photos/300/220" alt="">
@@ -127,7 +150,11 @@
                   </a>
               </div>
               <div class="col-sm-12 mt-4 text-center">
-                <h2 class="text-center">贊助商</h2>
+                <div class="row">
+                  <div class="col-12">
+                    <h2 class="text-center"><span>贊助商</span></h2>
+                  </div>
+                </div>
                 <a class="businessSupportInfo">
                     <div class="img">
                         <img src="https://picsum.photos/300/220" alt="">
