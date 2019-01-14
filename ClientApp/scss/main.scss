@@ -1,6 +1,7 @@
 $mq576: 576px;
 $mq767: 767px;
 $mq991: 991px;
+$mq1200: 1200px;
 
 $templateColor: #eeb118;
 
@@ -23,6 +24,34 @@ $templateColor: #eeb118;
     @media screen and (max-width: $mq576){
       width: 40%;
     }
+  }
+}
+%common2{
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  height: 100%;
+
+  &::before{
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 65%;
+    margin-right: 6px;
+    background-color: $templateColor;
+    vertical-align: text-bottom;
+    // @media screen and (max-width: $mq576){
+      // width: 40%;
+    // }
+  }
+}
+
+@mixin commonH3{
+  h3{
+    font-size: 33px;
+    @extend %common2;
   }
 }
 
@@ -82,8 +111,7 @@ body.body{
 
 
 
-// navbar選單
-
+// navbar選單hero
 .navbar-light.navbar-light .navbar-nav .show>.nav-link,
 .navbar-light.navbar-light .navbar-nav .active>.nav-link,
 .navbar-light.navbar-light .navbar-nav .nav-link{
@@ -139,12 +167,76 @@ body.body{
   }
 }
 
+.account.account{
+  // max-height: 22px;
+  
+  .accountName{
+    margin-right: 5px;
+  }
+
+  .accountImg{
+    display: inline-block;
+    max-width: 25px;
+
+    @media screen and (max-width: $mq767){
+      display: none;
+    }
+    
+    > img{
+      width: 100%;
+    } 
+  }
+
+  &~.dropdown-menu{
+    left: 25px;
+    
+
+    .dropdown-item{
+      padding: 7px 6px;
+      &:hover{
+        background-color: transparent;
+      }
+      
+      &:first-child{
+        text-align: right;
+      }
+
+
+      &.font{
+        transition: color .3s ease;
+
+        &:hover{
+          color: $templateColor;
+        }
+      }
+
+      .mTERRACEBtn{
+        border-radius: 5px;
+        padding: 3px 14px;
+        font-size: 14px;
+      }
+
+      .accountImg{
+        max-width: 35px;
+        margin: 0 auto;
+
+        > img{
+          width: 100%;
+        } 
+      }
+
+    }
+  }
+  
+}
+
 .navbar-light.navbar-light .navbar-toggler{
   border-color:white;
 }
 .navbar-toggler-icon.navbar-toggler-icon.navbar-toggler-icon{
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
 
 
 // scroll to top
@@ -215,10 +307,72 @@ body.body{
   }
 
   .heroImg{
-    max-width: 510px;
+    position: relative;
+    max-width: 400px;
     // height: 565px;
+    margin: 0 auto;
+    z-index: 0;
+    border-radius: 10px;
+
+    &::before{
+      content: '';
+      width: 305px;
+      height: 305px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 5px solid #A4AEB5;
+      margin-left: -30%;
+      z-index: -1;
+    }
+
+    > img{
+      width: 100%;
+      box-shadow: 0px 0px 150px 70px #0d395a;
+      z-index: 1;
+      border-radius: 5px;
+    }
   }
 
+
+  .type-wrap{
+    position: relative;
+    margin-top: 15%;
+
+    @media screen and (max-width: $mq1200){
+      margin-top: 9%;
+    }
+
+    &::after{
+      content: '';
+      width: 100px;
+      height: 6px;
+      background-color: $templateColor;
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      transform: translateX(-50%);
+      display: block;
+      border-radius: 10px;
+
+      @media screen and (max-width: $mq1200){
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: translateX(0%);
+        margin: 30px auto 0;
+        display: block;
+      }
+    }
+
+    h1{
+      text-align: left;
+      @media screen and (max-width: $mq1200){
+        text-align: center;
+      }
+    }
+  }
 }
 
 // 活動照片跑馬燈
@@ -285,6 +439,7 @@ body.body{
 // 商業贊助
 .businessSupport{
   @include commonH2Style2;
+  @include commonH3;
   @include sectionDistance;
 
   .block{
@@ -308,6 +463,7 @@ body.body{
     border-radius: 10px;
     // margin: 0 25px 20px 0;
     margin: 0 auto 20px;
+    cursor: pointer;
 
     @media screen and (max-width: $mq576){
       display: block;
@@ -358,7 +514,7 @@ body.body{
     @media screen and (max-width: $mq991){
       display: block;
       width: 100%;
-      max-width: 110px;
+      max-width: 150px;
       margin: 0 auto;
       overflow: hidden;
       clear: both;
@@ -371,7 +527,8 @@ body.body{
       font-size: 20px;
       margin: 0;
       width: 50px;
-      height: 50px;
+      height: 80px;
+      background-color: $templateColor;
 
       > *{
         font-size: 30px;
@@ -381,6 +538,7 @@ body.body{
         position: relative;
         transform: none;
         top: 0;
+        height: 50px;
       }
     }
 
@@ -401,20 +559,31 @@ body.body{
     }
   }
 
-  .owl-nav [class*=owl-]{
-    &:hover{
-      transition-property: color, background-color;
-      transition-duration: .3s;
-      transition-timing-function: ease;
-      background-color: $templateColor;
+    .owl-nav{ 
+
+      @media screen and (max-width: $mq991){
+        margin-top: 15px;
+      }
+
+      [class*=owl-]{
+      &:hover{
+        transition-property: color, background-color;
+        transition-duration: .3s;
+        transition-timing-function: ease;
+        background-color: transparent;
+
+        .next{
+          color: $templateColor;
+
+          &:hover{
+            color: $templateColor;
+          }
+        }
+      }
 
       .next{
         color: white;
       }
-    }
-
-    .next{
-      color: $templateColor;
     }
   }
 }
@@ -435,10 +604,10 @@ body.body{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
     margin: 0;
     width: 100%;
     color: white;
@@ -495,3 +664,50 @@ body.body{
   display: block;
 }
 
+.mTERRACEBtn{
+  display: inline-block;
+  color: white;
+  background-color: $templateColor;
+  font-weight: 600;
+  line-height: 16px;
+  border: 2px solid $templateColor;
+  border-radius: 30px;
+  text-align: center;
+  padding: 18px 48px;
+  transition-duration: .3s;
+  transition-property: border, background-color;
+  transition-timing-function: ease;
+  font-size: 16px;
+
+  
+  &:hover{
+    background-color: transparent;
+    border-color: white;
+  }
+}
+
+.mt-35x{
+  margin-top: 35px;
+}
+
+.mb-50x{
+  margin-bottom: 50px;
+}
+
+// 大螢幕向左，1200置中
+.mText-xl-center{
+  text-align: left;
+
+  @media screen and (max-width: $mq1200){
+    text-align: center;
+  }
+}
+
+.fWeight-800{
+  font-weight: 800;
+}
+
+.showww{
+  visibility: visible !important;
+  opacity: 1 !important;
+}
