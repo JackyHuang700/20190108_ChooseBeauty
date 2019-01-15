@@ -346,4 +346,4 @@ $(".type-wrap span:last").typed(_defineProperty({
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=index.bundle.923b1643.js.map
+//# sourceMappingURL=index.bundle.f205d9e6.js.map

@@ -285,7 +285,7 @@ body.body{
   // height: 100%;
   width: 100%;
   display: block;
-  background-image: url('/../images/heroBG.jpg');
+  background-image: url(/images/heroBG.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -657,7 +657,7 @@ body.body{
 }
 
 .bgSection{
-  background-image: url('/../images/bgSection.png');
+  background-image: url(/images/bgSection.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

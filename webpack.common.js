@@ -156,7 +156,12 @@ module.exports = {
         from: path.resolve(__dirname, `ClientApp/cpoyVendor/`),
         to: path.resolve(__dirname, `wwwroot/cpoyVendor/cpoyVendorTwo`),
         toType: 'dir'
-      }
+      },
+      {
+        from: path.resolve(__dirname, `ClientApp/images/`),
+        to: path.resolve(__dirname, `wwwroot/webpackTest/images`),
+        toType: 'dir'
+      },
     ])
     // new webpack.ProvidePlugin({
     //   _: 'lodash' //所有页面都会引入 _ 这个变量，不用再import引入
