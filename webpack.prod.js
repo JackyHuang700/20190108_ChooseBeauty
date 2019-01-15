@@ -32,17 +32,6 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        include: [commonInclude],
-        exclude: [commonExclude],
-        use: {
-          loader: 'file-loader?name=img/[name].[ext]',
-          options: {
-            emitFile: false
-          }
-        }
-      },
-      {
         test: /\.css$/,
         include: [commonInclude],
         exclude: [commonExclude],
@@ -70,7 +59,6 @@ module.exports = merge(common, {
 
             options: {
               sourceMap: true,
-              url: false,
             }
           },
            
@@ -87,7 +75,8 @@ module.exports = merge(common, {
             options: {
               sourceMap: true
             }
-          }
+          },
+          
         ]
       }
     ]

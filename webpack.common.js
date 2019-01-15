@@ -55,6 +55,12 @@ module.exports = {
       },
 
       {
+        test: /\.(png|svg|jpg|gif)$/,
+        include: [commonInclude],
+        exclude: [commonExclude],
+        use: ['file-loader']
+      },
+      {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         include: [commonInclude],
         exclude: [commonExclude],
@@ -149,11 +155,6 @@ module.exports = {
       {
         from: path.resolve(__dirname, `ClientApp/cpoyVendor/`),
         to: path.resolve(__dirname, `wwwroot/cpoyVendor/cpoyVendorTwo`),
-        toType: 'dir'
-      },
-      {
-        from: path.resolve(__dirname, `ClientApp/images/`),
-        to: path.resolve(__dirname, `wwwroot/webpackTest/images`),
         toType: 'dir'
       },
     ])
