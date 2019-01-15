@@ -92,6 +92,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 // import printMe from './print'
  // import '../css/styles.css'
 // import {
@@ -217,124 +219,124 @@ $('.owlTwo').owlCarousel(owlCommonSetting2); // animateOut: 'fadeOut',
 // animateIn: 'fadeIn',
 // nav:true,
 // particles
-// particlesJS("particles-js", {
-//     "particles": {
-//       "number": {
-//         "value": 80,
-//         "density": {
-//           "enable": true,
-//           "value_area": 800
-//         }
-//       },
-//       "color": {
-//         "value": "#eee"
-//       },
-//       "shape": {
-//         "type": "triangle",
-//         "stroke": {
-//           "width": 0,
-//           "color": "#000000"
-//         },
-//         "polygon": {
-//           "nb_sides": 5
-//         },
-//         "image": {
-//           "src": "img/github.svg",
-//           "width": 100,
-//           "height": 100
-//         }
-//       },
-//       "opacity": {
-//         "value": 0.5,
-//         "random": false,
-//         "anim": {
-//           "enable": false,
-//           "speed": 1,
-//           "opacity_min": 0.1,
-//           "sync": false
-//         }
-//       },
-//       "size": {
-//         "value": 3,
-//         "random": true,
-//         "anim": {
-//           "enable": false,
-//           "speed": 40,
-//           "size_min": 0.1,
-//           "sync": false
-//         }
-//       },
-//       "line_linked": {
-//         "enable": true,
-//         "distance": 150,
-//         "color": "#eee",
-//         "opacity": 0.4,
-//         "width": 1
-//       },
-//       "move": {
-//         "enable": true,
-//         "speed": 6,
-//         "direction": "none",
-//         "random": false,
-//         "straight": false,
-//         "out_mode": "out",
-//         "bounce": false,
-//         "attract": {
-//           "enable": false,
-//           "rotateX": 600,
-//           "rotateY": 1200
-//         }
-//       }
-//     },
-//     "interactivity": {
-//       "detect_on": "canvas",
-//       "events": {
-//         "onhover": {
-//           "enable": true,
-//           "mode": "repulse"
-//         },
-//         "onclick": {
-//           "enable": false,
-//           "mode": "push"
-//         },
-//         "resize": true
-//       },
-//       "modes": {
-//         "grab": {
-//           "distance": 140,
-//           "line_linked": {
-//             "opacity": 1
-//           }
-//         },
-//         "bubble": {
-//           "distance": 400,
-//           "size": 40,
-//           "duration": 2,
-//           "opacity": 8,
-//           "speed": 3
-//         },
-//         "repulse": {
-//           "distance": 200,
-//           "duration": 0.4
-//         },
-//         "push": {
-//           "particles_nb": 4
-//         },
-//         "remove": {
-//           "particles_nb": 2
-//         }
-//       }
-//     },
-//     "retina_detect": true
-//   });
-//typed.js
-// $(".type-wrap span:last").typed({
-// 	strings: ["^1000 <strong>mTERRACE</strong>."],
-// 	typeSpeed: 100,
-// 	loop: false,
-// 	contentType: 'html',
-//   loop: true
-// });
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#eee"
+    },
+    "shape": {
+      "type": "triangle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#eee",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}); //typed.js
+
+$(".type-wrap span:last").typed(_defineProperty({
+  strings: ["^1000 <strong>mTERRACE</strong>."],
+  typeSpeed: 100,
+  loop: false,
+  contentType: 'html'
+}, "loop", true));
 
 /***/ }),
 /* 1 */
@@ -344,4 +346,4 @@ $('.owlTwo').owlCarousel(owlCommonSetting2); // animateOut: 'fadeOut',
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=index.bundle.eb3fbfa2.js.map
+//# sourceMappingURL=index.bundle.1ae7116f.js.map
