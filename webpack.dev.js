@@ -29,6 +29,13 @@ module.exports = merge(common, {
   },
   module: {
     rules: [
+
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        include: [commonInclude],
+        exclude: [commonExclude],
+        use: ['resolve-url-loader']
+      },
       {
         test: /\.css$/,
         include: [commonInclude],

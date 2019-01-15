@@ -32,6 +32,17 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.(png|svg|jpg|gif)$/,
+        include: [commonInclude],
+        exclude: [commonExclude],
+        use: {
+          loader: 'file-loader?name=img/[name].[ext]',
+          options: {
+            emitFile: false
+          }
+        }
+      },
+      {
         test: /\.css$/,
         include: [commonInclude],
         exclude: [commonExclude],
@@ -58,9 +69,11 @@ module.exports = merge(common, {
             loader: 'css-loader', // 将 CSS 转化成 CommonJS 模块
 
             options: {
-              sourceMap: true
+              sourceMap: true,
+              url: false,
             }
           },
+           
           {
             loader: 'postcss-loader',
             options: {

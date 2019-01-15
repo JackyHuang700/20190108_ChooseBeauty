@@ -55,12 +55,6 @@ module.exports = {
       },
 
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        include: [commonInclude],
-        exclude: [commonExclude],
-        use: ['file-loader']
-      },
-      {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         include: [commonInclude],
         exclude: [commonExclude],
