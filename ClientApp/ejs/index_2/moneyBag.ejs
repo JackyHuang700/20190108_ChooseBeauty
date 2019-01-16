@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <% include ClientApp/ejs/index_2/public/headerTag.ejs %>
+  </head>
+  <body class="body">
+    <%- include ClientApp/ejs/index_2/public/style.ejs %>
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var css in
+    htmlWebpackPlugin.files.css) { %>
+    <link
+      href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>"
+      rel="stylesheet"
+    />
+    <% } %> <% } %>
+
+    <%- include ClientApp/ejs/index_2/public/header.ejs %>
+
+    <section class="moneyBag">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center fz-25x">我的錢包</div>
+          <div class="col-md-4 personInfo">
+            <div class="img">
+              <!-- <img src="" alt=""> -->
+              <img class="rounded-circle" src="https://picsum.photos/100/100?image=1027" alt="">
+            </div>
+            <div class="name">暱稱</div>
+            <div class="focus">
+              關注: <span>100</span>
+            </div>
+            <div class="link">
+               <a href="#">個人中心</a>
+               <a href="#">我的錢包</a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div>我的點數</div>
+            <div class="points">
+              <div>
+                點數: <span>1000</span>點
+                <a href="#">充值</a> 
+              </div>
+            </div>
+            <div class="pointsConver">
+              <div>點數換算</div>
+              <div></div>
+            </div>
+            <div class="record">
+              <div>使用紀錄</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <%- include ClientApp/ejs/index_2/public/footer.ejs %>
+    <%- include ClientApp/ejs/index_2/public/script.ejs %>
+
+    <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
+
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in
+    htmlWebpackPlugin.files.chunks) { %>
+    <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    %>
+    <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <% } %>
+    
+  </body>
+</html>
+
+

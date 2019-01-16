@@ -57,7 +57,25 @@ module.exports = {
         chunksSortMode: 'manual'
         // 跟著HtmlWebpackHarddiskPlugin套件
         // alwaysWriteToDisk: true
-      })
+      }),
+      new HtmlWebpackPlugin({
+        inject: false,
+        template: path.resolve(__dirname, 'ClientApp/ejs/index_2/moneyBag.ejs'),
+        filename: path.resolve(__dirname, 'moneyBag.html'),
+        chunks: ['index'],
+        HtmlWebpackPluginOverride: true,
+        // hash:true,//防止缓存
+        outputFile: {
+          vendor: 'wwwroot/vendor/dll.vendor.js',
+          isProd: isProd,
+          port: module.exports.devServerPort,
+        },
+        minify: minify,
+        // 啟用手動排序
+        chunksSortMode: 'manual'
+        // 跟著HtmlWebpackHarddiskPlugin套件
+        // alwaysWriteToDisk: true
+      }),
     )
 
     if (enableHtmlWebpackHarddiskPlugin) {
