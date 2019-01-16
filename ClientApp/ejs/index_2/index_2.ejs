@@ -183,6 +183,10 @@
     <%- include ClientApp/ejs/index_2/public/footer.ejs %>
     <%- include ClientApp/ejs/index_2/public/script.ejs %>
 
+    <script>
+      window.strickyFixedOpen = true
+    </script>
+
     <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
 
     <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in

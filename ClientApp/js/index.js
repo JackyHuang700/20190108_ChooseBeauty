@@ -96,7 +96,12 @@ function stickyHeader() {
   if ($('.stricky').length) {
       var strickyScrollPos = 100;
       strickyScrollPos = 40;
-      if ($(window).scrollTop() > strickyScrollPos) {
+
+      // console.log('strickyFixedOpen', strickyFixedOpen);
+      if(typeof window.strickyFixedOpen === 'undefined'){
+        $('.stricky').addClass('stricky-fixed slideInDown animated');
+      }
+      else if ($(window).scrollTop() > strickyScrollPos) {
           $('.stricky').removeClass('slideIn animated');
           $('.stricky').addClass('stricky-fixed slideInDown animated');
           $('.scrollToTop').fadeIn(500);

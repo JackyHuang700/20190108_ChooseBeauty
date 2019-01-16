@@ -717,8 +717,36 @@ body.body{
   margin-top: 100px;
 }
 
+.mb-5x{
+  margin-bottom: 5px;
+}
+
 .fz-25x{
   font-size: 25px;
+}
+
+.fz-21x{
+  font-size: 21px;
+}
+
+.text-red{
+  color: red;
+}
+
+.cbColor{
+  color: $templateColor !important;
+}
+
+.cbBGC{
+  background-color: $templateColor !important;
+}
+
+.cbBorder{
+  border-color: $templateColor !important;
+}
+
+.o-5{
+  opacity: .5;
 }
 
 // === 我的錢包 - moneyBag ===
@@ -734,13 +762,15 @@ body.body{
   }
 
   height: 97.35%;
-  background-color: gray;
+  background-color: #f2f2f2;
   padding-top: 115px;
 
   // 個人資訊
   .personInfo{
     @include moneyBagBox();
     font-size: 16px;
+    margin-bottom: 20px;
+
     
     >*{
       vertical-align: middle;
@@ -769,7 +799,7 @@ body.body{
       display: inline-block;
       background-color: rgb(255, 104, 249);
       color: white;
-      padding: 5px 10px;
+      padding: 2px 10px;
       border-radius: 5px;
 
       > *{
@@ -780,6 +810,8 @@ body.body{
 
     .link{
       margin-top: 20px;
+      text-align: center;
+
       > *{
         cursor: pointer;
         color: $templateColor;
@@ -809,11 +841,74 @@ body.body{
   .points{
     @include moneyBagBox();
     margin-bottom: 20px;
+
+    .fill{
+      text-decoration: none;
+      color: rgba(#404040, .8);
+      background-color: $templateColor;
+      border: 2px solid $templateColor;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color .3s ease;
+      
+      &:hover{
+        background-color: transparent;
+      }
+    }
+    
   }
 
   .pointsConver{
     @include moneyBagBox();
     margin-bottom: 20px;
+    padding: 20px 0 0;
+
+    > *:first-child{
+      padding: 20px 16px;
+    }
+
+    .pointsConverArea{
+      width: 100%;
+      padding: 10px 10px 20px;
+      background-color: rgb(242, 242, 242);
+      border-radius: 10px;
+
+      .icon{
+        cursor: pointer;
+        max-width: 100px;
+        color: rgb(111, 103, 119);
+        font-size: 12px;
+        display: inline-block;
+        border-radius: 10px;
+        transition-duration: .3s;
+        transition-property: background-color, transform;
+        transition-timing-function: ease-out;
+        
+        &:hover{
+          transform: translate(0, -5px);
+          background-color: rgba(255, 255, 255, .8);
+        }
+
+        .img{
+          width: 100%;
+          display: block;
+          margin:0 auto;
+          padding: 5px 20px;
+
+          > img{
+            width: 100%
+          }
+        }
+
+        .name, .point{
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+      
+    }
   }
 
   .record{
@@ -822,3 +917,22 @@ body.body{
 
 }
 // === 我的錢包 - moneyBag ===
+
+// dataTable
+.page-item.active .page-link.page-link{
+  border-color: $templateColor;
+  background-color: $templateColor;
+}
+
+.page-link.page-link{
+  color: $templateColor;
+
+  &:focus{
+    box-shadow: 0 0 0 0.2rem rgba($templateColor,.25);
+  }
+}
+
+.table-bordered.table-bordered,
+.table-bordered.table-bordered td, .table-bordered.table-bordered th{
+  border-width: 0;
+}
