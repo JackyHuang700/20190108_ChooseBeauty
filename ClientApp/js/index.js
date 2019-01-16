@@ -167,7 +167,7 @@ owlCommonSetting2.responsive = {
 $('.owlTwo').owlCarousel(owlCommonSetting2)
 
 
-const isOpen = false
+const isOpen = true
 if (isOpen) {
   // animateOut: 'fadeOut',
   // animateIn: 'fadeIn',
