@@ -101,7 +101,6 @@ function stickyHeader() {
       var strickyScrollPos = 100;
       strickyScrollPos = 40;
 
-      console.log('strickyFixedOpen', typeof window.strickyFixedOpen === 'undefined');
       if(typeof window.strickyFixedOpen === 'undefined'){
         $('.stricky').addClass('stricky-fixed slideInDown animated');
       }
@@ -167,7 +166,7 @@ owlCommonSetting2.responsive = {
 $('.owlTwo').owlCarousel(owlCommonSetting2)
 
 
-const isOpen = true
+var isOpen = true
 if (isOpen) {
   // animateOut: 'fadeOut',
   // animateIn: 'fadeIn',

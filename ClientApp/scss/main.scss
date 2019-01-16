@@ -5,6 +5,8 @@ $mq1200: 1200px;
 
 $templateColor: #eeb118;
 
+$headerHeight: 115px;
+$footerHeight: 65px;
 
 %common{
   color: #222;
@@ -73,14 +75,19 @@ $templateColor: #eeb118;
   padding: 75px 0;
 }
 
-
-
-html, body{
-  width: 100%;
+html{
   height: 100%;
 }
 
+html, body{
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
 body.body{
+  position: relative;
+  min-height: 100%;
   font-weight: 600;
   background-color: rgb(247, 247, 247);
 }
@@ -488,12 +495,18 @@ body.body{
 
 // footer
 .footer{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
   height: auto;
   background-color: rgba(27, 54, 100, 0.84);
   vertical-align: middle;
   padding: 16px 0;
   color: $templateColor;
   font-weight: 700;
+  
 }
 
 // owl-carousel
@@ -761,9 +774,10 @@ body.body{
     box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 45px;
   }
 
-  height: 97.35%;
-  background-color: #f2f2f2;
-  padding-top: 115px;
+  // height: 97.35%;
+  // background-color: #f2f2f2;
+  padding-top: $headerHeight;
+  padding-bottom: $footerHeight;
 
   // 個人資訊
   .personInfo{
