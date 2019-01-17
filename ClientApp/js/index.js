@@ -76,11 +76,12 @@ import '../scss/main.scss'
 // console.log(z); // { a: 3, b: 4 }
 // [5, 6].map(n => console.log(n));
 
+var mq992 = 992
 var mq767 = 767
 
 // hover navbar
 $('.dropdown').hover(function(){ 
-  if ($(window).width() > mq767) $('.dropdown-toggle', this).trigger('click'); 
+  if ($(window).width() > mq992) $('.dropdown-toggle', this).trigger('click'); 
 });
 
 $( document ).ready(function() {
@@ -100,6 +101,8 @@ function stickyHeader() {
   if ($('.stricky').length) {
       var strickyScrollPos = 100;
       strickyScrollPos = 40;
+
+
 
       if(typeof window.strickyFixedOpen === 'undefined'){
         $('.stricky').addClass('stricky-fixed slideInDown animated');
@@ -125,171 +128,3 @@ $('.scrollToTop').click(function () {
   return false;
 });
 
-// owlcarousel
-var owlCommonSetting = {
-  loop:true,
-  margin:10,
-  responsiveClass:true,
-  nav:true,
-  items: 1,
-  autoplay:true,
-  autoplayTimeout:5000,
-  autoplayHoverPause:true,
-  navText: [
-      (
-          '<span class="next">' +
-          '  <i class="fas fa-arrow-left"></i>' +
-          '</span>'
-      ),
-      (
-          '<span class="next">' +
-          '  <i class="fas fa-arrow-right"></i>' +
-          '</span>'
-      )],
-  responsive:{
-      1000:{
-          items:1,
-          loop:true
-      }
-  }
-}
-
-$('.owlOne').owlCarousel(owlCommonSetting)
-
-var owlCommonSetting2 = JSON.parse(JSON.stringify(owlCommonSetting))
-owlCommonSetting2.responsive = {
-  1000:{
-    items:3,
-    loop:true
-}
-}
-$('.owlTwo').owlCarousel(owlCommonSetting2)
-
-
-var isOpen = true
-if (isOpen) {
-  // animateOut: 'fadeOut',
-  // animateIn: 'fadeIn',
-  // nav:true,
-  // particles
-  particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 80,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#eee"
-        },
-        "shape": {
-          "type": "triangle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 5
-          },
-          "image": {
-            "src": "img/github.svg",
-            "width": 100,
-            "height": 100
-          }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 3,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#eee",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 6,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "repulse"
-          },
-          "onclick": {
-            "enable": false,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 140,
-            "line_linked": {
-              "opacity": 1
-            }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
-        }
-      },
-      "retina_detect": true
-    });
-  
-  
-  //typed.js
-  $(".type-wrap span:last").typed({
-    strings: ["^1000 <strong>mTERRACE</strong>."],
-    typeSpeed: 100,
-    loop: false,
-    contentType: 'html',
-    loop: true
-  });
-}

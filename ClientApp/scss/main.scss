@@ -4,6 +4,7 @@ $mq991: 991px;
 $mq1200: 1200px;
 
 $templateColor: #eeb118;
+$HeaderFooterColor: #333;
 
 $headerHeight: 115px;
 $footerHeight: 65px;
@@ -75,6 +76,10 @@ $footerHeight: 65px;
   padding: 75px 0;
 }
 
+*:not(i):not(span){
+  font-family: 'Righteous', cursive !important;
+}
+
 html{
   height: 100%;
 }
@@ -112,7 +117,7 @@ body.body{
     z-index: 51;
     position: fixed;
     margin: 0;
-    background-color: rgb(34, 34, 34);
+    background-color: $HeaderFooterColor;
     padding: 0;
   }
 }
@@ -151,7 +156,7 @@ body.body{
   color: white;
 
 
-  @media screen and (max-width: $mq767){
+  @media screen and (max-width: $mq991){
     display: none;
   }
 
@@ -168,6 +173,7 @@ body.body{
     transition-duration: .3s;
     transition-property: background-color, color;
     transition-timing-function: ease;
+    padding: 6px 18px;
 
     &:hover{
       background-color: $templateColor;
@@ -302,12 +308,11 @@ body.body{
   .particlesJs{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-
   }
 
   .hreoBox{
@@ -460,7 +465,7 @@ body.body{
 
   .businessSupportInfo{
 
-    max-width: 247px;
+    max-width: 210px;
     width: 100%;
     height: auto;
     display: inline-block;
@@ -501,7 +506,8 @@ body.body{
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: rgba(27, 54, 100, 0.84);
+  background-color: $HeaderFooterColor;
+  // background-color: rgba(27, 54, 100, 0.84);
   vertical-align: middle;
   padding: 16px 0;
   color: $templateColor;
@@ -551,7 +557,8 @@ body.body{
         position: relative;
         transform: none;
         top: 0;
-        height: 50px;
+        height: 30px;
+        width: 30px;
       }
     }
 
@@ -596,13 +603,17 @@ body.body{
 
       .next{
         color: white;
+
+        @media screen and (max-width: $mq991){
+          font-size: 20px;
+        }
       }
     }
   }
 }
 
 .owl-theme.owl-theme .owl-dots .owl-dot{
-  
+  display: none;
   
   &.active, &:hover{
     span{
@@ -611,6 +622,7 @@ body.body{
     }
   }
 }
+
 
 // typedjs
 .type-wrap{
@@ -664,6 +676,14 @@ body.body{
 
 .p75-0-50{
   padding: 75px 0 50px;
+
+  @media screen and (max-width: $mq576){
+    padding: 0;
+  }
+}
+
+.p25-0-50{
+  padding: 25px 0 50px;
 
   @media screen and (max-width: $mq576){
     padding: 0;
@@ -762,6 +782,10 @@ body.body{
   opacity: .5;
 }
 
+.cur-default{
+  cursor: default;
+}
+
 // === 我的錢包 - moneyBag ===
 .moneyBag{
 
@@ -811,10 +835,12 @@ body.body{
 
     .focus{
       display: inline-block;
-      background-color: rgb(255, 104, 249);
+      // background-color: rgb(255, 104, 249);
+      background-color: #FF68F9;
       color: white;
       padding: 2px 10px;
       border-radius: 5px;
+      font-size: 15px;
 
       > *{
         padding-left: 5px;
