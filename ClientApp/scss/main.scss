@@ -1013,6 +1013,18 @@ body.body {
       margin: 0 30px;
     }
 
+    .errorMsg{
+      background-color: rgb(255, 101, 105);
+      border-radius: 5px;
+      padding: 6px 12px;
+      opacity: .95;
+      // max-width: 300px;
+      max-width: 200px;
+      text-align: center;
+      color: white;
+    }
+
+
     .logo{
       max-width: 85px;
       margin-bottom: 30px;
@@ -1058,7 +1070,8 @@ body.body {
   }
 }
 
-input:focus{
+input:focus,
+.form-control:focus.form-control:focus{
   border-color: $templateColor;
-  box-shadow: 0 0 0 0.2rem rgba($templateColor, .25);
+  box-shadow: 0 0 0 0.2rem rgba($templateColor, .55);
 }
