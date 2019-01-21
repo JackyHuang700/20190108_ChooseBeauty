@@ -1,0 +1,82 @@
+<!-- 佳麗個人網頁 - 個人動態 -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <% include ClientApp/ejs/index_2/public/headerTag.ejs %>
+  </head>
+  <body class="body">
+    <%- include ClientApp/ejs/index_2/public/style.ejs %>
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var css in
+    htmlWebpackPlugin.files.css) { %>
+    <link
+      href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>"
+      rel="stylesheet"
+    />
+    <% } %> <% } %>
+
+    <%- include ClientApp/ejs/index_2/public/header.ejs %>
+
+  
+
+    <section class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center fz-25x mb-4">我的錢包</div>
+        
+          <!-- <div data-toggle="modal" data-target="#exampleModal"></div> -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">選擇數量</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+              <div class="form-group row">
+                  <label class="col-sm-2" for="number">數量</label>
+                  <div class="col-sm-10">
+                    <select class="custom-select" id="number">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                    </select>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+              <button type="button" class="btn btn-primary col-2 cbBGC cbBorder">確認</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <%- include ClientApp/ejs/index_2/public/footer.ejs %>
+    <%- include ClientApp/ejs/index_2/public/script.ejs %>
+
+
+    <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
+
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in
+    htmlWebpackPlugin.files.chunks) { %>
+    <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    %>
+    <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <% } %>
+    
+  </body>
+</html>
+
+
