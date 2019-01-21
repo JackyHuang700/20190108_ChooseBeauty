@@ -1,1 +1,99 @@
-<!-- 前台頁面登入 -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <% include ClientApp/ejs/index_2/public/headerTag.ejs %>
+  </head>
+  <body class="body">
+    <%- include ClientApp/ejs/index_2/public/style.ejs %>
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var css in
+    htmlWebpackPlugin.files.css) { %>
+    <link
+      href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>"
+      rel="stylesheet"
+    />
+    <% } %> <% } %>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <style>
+      body.body{
+        height: 100%;
+      }
+
+      .scrollToTop{
+        display: none;
+      }
+    </style>
+
+    <!-- 前台頁面登入 -->
+    <section class="fontLogin d-flex justify-content-center align-items-center">
+      <div class="login">
+        <div class="logo d-block mx-auto">
+          <img src="wwwroot/images/mTERRACELogo.png" alt="">
+        </div>
+        
+        <h2 class="title">登入</h2>
+        <form action="" class="mt-4">
+          
+          <!-- <div class="formField">
+            <label for="">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" class="btn">
+          </div> -->
+
+          <div class="col-10 mx-auto">
+            <label class="sr-only" for="account">帳號</label>
+            <div class="input-group mb-2 mr-sm-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <i class="fas fa-user o-6"></i>
+                </div>
+              </div>
+              <input type="text" class="form-control" id="account" placeholder="帳號">
+            </div>
+          </div>
+          <div class="col-10 mx-auto mt-3">
+            <label class="sr-only" for="password">密碼</label>
+            <div class="input-group mb-2 mr-sm-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <i class="fas fa-key o-6"></i>
+                </div>
+              </div>
+              <input type="text" class="form-control" id="password" placeholder="密碼">
+            </div>
+          </div>
+
+
+          <div class="text-center mt-5">
+            <button class="btn btn-primary btn-lg col-4 cbBtn" type="submit">登入</button>
+            <button class="btn btn-secondary mr-2" type="button">取消</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <%- include ClientApp/ejs/index_2/public/footer.ejs %>
+    <%- include ClientApp/ejs/index_2/public/script.ejs %>
+
+
+
+    <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
+
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in
+    htmlWebpackPlugin.files.chunks) { %>
+    <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    %>
+    <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <% } %>
+    
+  </body>
+</html>
+
+

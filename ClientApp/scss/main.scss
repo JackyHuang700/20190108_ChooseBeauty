@@ -766,6 +766,13 @@ body.body {
 .o-5 {
   opacity: 0.5;
 }
+.o-6 {
+  opacity: 0.6;
+}
+
+.w-40p{
+  width: 40%;
+}
 
 .cur-default {
   cursor: default;
@@ -983,4 +990,75 @@ body.body {
     font-size: 20px;
     margin-bottom: 20px;
   }
+}
+
+
+// 前台 - 登入
+.fontLogin{
+  height: 100%;
+  width: 100%;
+  // background-color: #F7F4F4;
+  background-color: #FAEFEF;
+
+  .login{
+    background-color: #fff;
+    // background-color: #1B589D;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 580px;
+    width: 100%;
+    box-shadow: rgba(40, 35, 45, 0.2) 0px 0px 10px 0px;
+
+    @media screen and (max-width: $mq767){
+      margin: 0 30px;
+    }
+
+    .logo{
+      max-width: 85px;
+      margin-bottom: 30px;
+
+      > img{
+        width: 100%;
+      }
+    }
+
+    .title{
+      font-size: 20px;
+      font-weight: 700;
+      width: 100%;
+      text-align: center;
+      opacity: .7;
+      position: relative;
+
+      &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 1px;
+        width: 90%;
+        background-color: rgba(169, 164, 176, .2);
+        display: block;
+      }
+    }
+
+    .cbBtn{
+
+      transition: all .3s ease-out;
+
+      &:hover{
+        border-color: $templateColor;
+        background-color: $templateColor;
+        color: rgba(#404040, 0.8);
+        opacity: .8;
+      }
+    }
+
+  }
+}
+
+input:focus{
+  border-color: $templateColor;
+  box-shadow: 0 0 0 0.2rem rgba($templateColor, .25);
 }
