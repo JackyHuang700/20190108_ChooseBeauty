@@ -126,4 +126,4 @@ console.log(square(51)); // 需要加上才會啟動HMR
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=index2.bundle.99f559e5.js.map
+//# sourceMappingURL=index2.bundle.6c58e853.js.map
