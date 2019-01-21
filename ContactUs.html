@@ -98,128 +98,54 @@
 </header>
 
 
-    <link
-    rel="stylesheet"
-    href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
+
     <style>
-        #example_length {
-          display: none;
-        }
-  
-        /* #example thead, */
-        #example tfoot {
-          display: none;
-        }
 
-        #example thead{
-          background-color: #eeb118;
-          text-align: center;
-        }
-      </style>
+    </style>
 
-    <section class="moneyBag">
+    <section class="contactUs">
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center fz-25x mb-4">我的錢包</div>
-          <div class="col-md-4">
-            <div class="personInfo align-self-start">
-              <div class="img">
-                <!-- <img src="" alt=""> -->
-                <img class="rounded-circle" src="https://picsum.photos/100/100?image=1027" alt="">
-              </div>
-              <div class="name">暱稱</div>
-              <div class="focus">
-                關注: <span>100</span>
-              </div>
-              <div class="link">
-                <a href="#">個人中心</a>
-                <a href="#">我的錢包</a>
-              </div>
-          </div>
-          </div>
-          <div class="col-md-8">
-            <div class="points">
-              <div class="text-center fz-21x">我的點數</div>
-              <div class="mb-5x d-flex justify-content-between align-items-center">
-                <div>
-                  點數: <span class="cbColor">1000</span>點
+          <div class="col-12">
+            <h2 class="title">聯絡我們</h2>
+            <div>
+              <form>
+                <div class="form-group row">
+                  <label for="userName" class="col-sm-2 text-sm-right col-form-label"><span class="text-red">*</span>姓名</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control is-invalid" id="userName" name="userName" placeholder="姓名">
+                    <small id="userNameHelp" class="form-text text-red">為必填寫</small>
+                  </div>
                 </div>
-                <a class="fill" href="#">充值</a> 
-              </div>
-              <div>
-                <span class="text-red">1</span>&nbsp;新台幣相當於&nbsp;<span class="text-red">1</span>&nbsp;點
-              </div>
-            </div>
-            <div class="pointsConver">
-              <div class="text-center fz-21x">點數換算</div>
-              <div class="pointsConverArea">
-                <div class="icon" data-toggle="modal" data-target="#exampleModal">
-                  <span class="img">
-                    <img src="https://picsum.photos/100/100?image=1040" alt="">
-                  </span>
-                  <span class="name mt-1">來親幾哩</span>
-                  <span class="point mt-1">50</span>
+                <div class="form-group row">
+                  <label for="telePhone" class="col-sm-2 text-sm-right col-form-label"><span class="text-red">*</span>電話</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="telePhone" name="telePhone" placeholder="電話">
+                    <small id="telePhoneHelp" class="form-text text-red">為必填寫</small>
+                  </div>
                 </div>
-                
-              </div>
-            </div>
-            <div class="record">
-              <div class="text-center fz-21x">使用紀錄</div>
-              <div>
-                  <table id="example" class="table table-striped table-bordered" style="width:100%">
-                  <thead>
-                    <tr>
-                      <th class="o-5">時間</th>
-                      <th class="o-5">交易類型</th>
-                      <th class="o-5">數量</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>2019-01-16</td>
-                      <td>支付寶</td>
-                      <td>1</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                <div class="form-group row">
+                  <label for="EMail" class="col-sm-2 text-sm-right col-form-label"><span class="text-red">*</span>郵件</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="EMail" name="EMail" placeholder="郵件">
+                    <small id="EMailHelp" class="form-text text-red">為必填寫</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="message" class="col-sm-2 text-sm-right col-form-label"><span class="text-red">*</span>內容</label>
+                  <div class="col-sm-10">
+                    <input type="message" class="form-control" id="message" name="message" placeholder="內容">
+                    <small id="messageHelp" class="form-text text-red">為必填寫</small>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary d-block mx-auto mt-4 btn-lg col-4 cbBtn">送出</button>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">選擇數量</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              
-              <div class="form-group row">
-                  <label class="col-sm-2" for="number">數量</label>
-                  <div class="col-sm-10">
-                    <select class="custom-select" id="number">
-                      <option selected value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select>
-                </div>
-              </div>
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-              <button type="button" class="btn btn-primary col-2 cbBGC cbBorder">確認</button>
-            </div>
-          </div>
-        </div>
-      </div>
+   
 
 
     <!-- And here is our main footer that is used across all the pages of our website -->
@@ -250,34 +176,7 @@
 <!-- sfd -->
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/typed.min.js"></script>
 
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    <script>
-      $( document ).ready(function() {
-        var myMoexampleModaldalDOM =  $('#exampleModal')
-        myMoexampleModaldalDOM.on('shown.bs.modal', function (e) {
-          console.log('do something...')
-        })
-        myMoexampleModaldalDOM.on('hidden.bs.modal', function (e) {
-          console.log('do something...')
-        })
 
-        // dataTable
-          $('#example').DataTable({
-            searching: false,
-            info: false,
-            ordering: false,
-            language: {
-              infoEmpty: '無任何資料',
-              paginate: {
-                previous: '上一頁',
-                next: '下一頁'
-              }
-            }
-          })
-      });
-     
-    </script>
 
     <script src="wwwroot/vendor/dll.vendor.js"></script>
 

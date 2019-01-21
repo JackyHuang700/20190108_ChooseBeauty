@@ -9,14 +9,14 @@ $HeaderFooterColor: #333;
 $headerHeight: 115px;
 $footerHeight: 65px;
 
-%common{
+%common {
   color: #222;
   font-weight: 600;
   text-align: center;
   display: inline-block;
 
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     display: block;
     width: 50%;
     height: 5px;
@@ -24,12 +24,12 @@ $footerHeight: 65px;
     margin: 16px auto 32px;
     background-color: $templateColor;
 
-    @media screen and (max-width: $mq576){
+    @media screen and (max-width: $mq576) {
       width: 40%;
     }
   }
 }
-%common2{
+%common2 {
   color: #222;
   font-weight: 600;
   text-align: center;
@@ -37,8 +37,8 @@ $footerHeight: 65px;
   overflow: hidden;
   height: 100%;
 
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     display: inline-block;
     width: 5px;
     height: 65%;
@@ -46,58 +46,59 @@ $footerHeight: 65px;
     background-color: $templateColor;
     vertical-align: text-bottom;
     // @media screen and (max-width: $mq576){
-      // width: 40%;
+    // width: 40%;
     // }
   }
 }
 
-@mixin commonH3{
-  h3{
+@mixin commonH3 {
+  h3 {
     font-size: 33px;
     @extend %common2;
   }
 }
 
-@mixin commonH2{
-  h2{
+@mixin commonH2 {
+  h2 {
     font-size: 38px;
     @extend %common;
   }
 }
 
-@mixin commonH2Style2{
-  h2{
+@mixin commonH2Style2 {
+  h2 {
     font-size: 30px;
     @extend %common;
   }
 }
 
-@mixin sectionDistance{
+@mixin sectionDistance {
   padding: 75px 0;
 }
 
-*:not(i):not(span){
-  font-family: 'Righteous', cursive !important;
+*:not(i):not(span) {
+  font-family: "Righteous", cursive !important;
 }
 
-html{
+html {
   height: 100%;
 }
 
-html, body{
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
 }
 
-body.body{
+body.body {
   position: relative;
   min-height: 100%;
   font-weight: 600;
   background-color: rgb(247, 247, 247);
 }
 
-.header{
+.header {
   position: absolute;
   top: 0;
   left: 0;
@@ -106,11 +107,11 @@ body.body{
   padding: 40px 70px 0 70px;
   color: white;
 
-  @media screen and (max-width: $mq576){
+  @media screen and (max-width: $mq576) {
     padding: 0;
   }
 
-  &.stricky-fixed{
+  &.stricky-fixed {
     top: 0;
     left: 0;
     width: 100%;
@@ -122,27 +123,24 @@ body.body{
   }
 }
 
-
-
 // navbar選單hero
-.navbar-light.navbar-light .navbar-nav .show>.nav-link,
-.navbar-light.navbar-light .navbar-nav .active>.nav-link,
-.navbar-light.navbar-light .navbar-nav .nav-link{
-
+.navbar-light.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light.navbar-light .navbar-nav .nav-link {
   color: white;
-  transition: .3s color ease;
+  transition: 0.3s color ease;
   font-size: 15px;
   margin-left: 40px;
 
-  &:hover, &:focus{
+  &:hover,
+  &:focus {
     color: $templateColor;
   }
-
 }
 
-.dropdown-menu.dropdown-menu{
+.dropdown-menu.dropdown-menu {
   transition-property: opacity, visibility;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
   transition-timing-function: ease;
   visibility: hidden;
   opacity: 0;
@@ -155,106 +153,97 @@ body.body{
   background-color: #222;
   color: white;
 
-
-  @media screen and (max-width: $mq991){
+  @media screen and (max-width: $mq991) {
     display: none;
   }
 
-
-  &.show{
+  &.show {
     visibility: visible;
     opacity: 1;
   }
 
-  .dropdown-item{
-
+  .dropdown-item {
     // padding: 0 18px;
     color: white;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     transition-property: background-color, color;
     transition-timing-function: ease;
     padding: 6px 18px;
 
-    &:hover{
+    &:hover {
       background-color: $templateColor;
     }
   }
 }
 
-.account.account{
+.account.account {
   // max-height: 22px;
-  
-  .accountName{
+
+  .accountName {
     margin-right: 5px;
   }
 
-  .accountImg{
+  .accountImg {
     display: inline-block;
     max-width: 25px;
 
-    @media screen and (max-width: $mq767){
+    @media screen and (max-width: $mq767) {
       display: none;
     }
-    
-    > img{
+
+    > img {
       width: 100%;
-    } 
+    }
   }
 
-  &~.dropdown-menu{
+  & ~ .dropdown-menu {
     left: 25px;
-    
 
-    .dropdown-item{
+    .dropdown-item {
       padding: 7px 6px;
-      &:hover{
+      &:hover {
         background-color: transparent;
       }
-      
-      &:first-child{
+
+      &:first-child {
         text-align: right;
       }
 
+      &.font {
+        transition: color 0.3s ease;
 
-      &.font{
-        transition: color .3s ease;
-
-        &:hover{
+        &:hover {
           color: $templateColor;
         }
       }
 
-      .mTERRACEBtn{
+      .mTERRACEBtn {
         border-radius: 5px;
         padding: 3px 14px;
         font-size: 14px;
       }
 
-      .accountImg{
+      .accountImg {
         max-width: 35px;
         margin: 0 auto;
 
-        > img{
+        > img {
           width: 100%;
-        } 
+        }
       }
-
     }
   }
-  
 }
 
-.navbar-light.navbar-light .navbar-toggler{
-  border-color:white;
+.navbar-light.navbar-light .navbar-toggler {
+  border-color: white;
 }
-.navbar-toggler-icon.navbar-toggler-icon.navbar-toggler-icon{
+.navbar-toggler-icon.navbar-toggler-icon.navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-
-
 // scroll to top
-.scrollToTop{
+.scrollToTop {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -269,32 +258,32 @@ body.body{
   box-shadow: rgba(0, 0, 0, 0.2) 0px 23px 42px;
   border-radius: 10px;
   background-color: $templateColor;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 
-  >*{
+  > * {
     display: inline-block;
     height: 100%;
     width: 100%;
   }
 }
 
-.logo{
+.logo {
   width: 100%;
   height: 100%;
   max-width: 90px;
   padding: 0;
 
-  > img{
+  > img {
     width: 100%;
   }
 }
 
 // hero
-.hero{
+.hero {
   min-height: 925px;
   // height: 100%;
   width: 100%;
@@ -304,8 +293,7 @@ body.body{
   background-repeat: no-repeat;
   background-size: cover;
 
-
-  .particlesJs{
+  .particlesJs {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -315,11 +303,11 @@ body.body{
     right: 0;
   }
 
-  .hreoBox{
+  .hreoBox {
     padding-top: 200px;
   }
 
-  .heroImg{
+  .heroImg {
     position: relative;
     max-width: 400px;
     // height: 565px;
@@ -327,20 +315,20 @@ body.body{
     z-index: 0;
     border-radius: 10px;
 
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       width: 305px;
       height: 305px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border: 5px solid #A4AEB5;
+      border: 5px solid #a4aeb5;
       margin-left: -30%;
       z-index: -1;
     }
 
-    > img{
+    > img {
       width: 100%;
       box-shadow: 0px 0px 150px 70px #0d395a;
       z-index: 1;
@@ -348,17 +336,16 @@ body.body{
     }
   }
 
-
-  .type-wrap{
+  .type-wrap {
     position: relative;
     margin-top: 15%;
 
-    @media screen and (max-width: $mq1200){
+    @media screen and (max-width: $mq1200) {
       margin-top: 9%;
     }
 
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       width: 100px;
       height: 6px;
       background-color: $templateColor;
@@ -369,7 +356,7 @@ body.body{
       display: block;
       border-radius: 10px;
 
-      @media screen and (max-width: $mq1200){
+      @media screen and (max-width: $mq1200) {
         position: relative;
         top: 0;
         right: 0;
@@ -379,9 +366,9 @@ body.body{
       }
     }
 
-    h1{
+    h1 {
       text-align: left;
-      @media screen and (max-width: $mq1200){
+      @media screen and (max-width: $mq1200) {
         text-align: center;
       }
     }
@@ -391,32 +378,27 @@ body.body{
 // 活動照片跑馬燈
 // 選美佳麗
 .activityPicture,
-.chooseBeauty{
-  
-    @include commonH2;
-    @include sectionDistance;
+.chooseBeauty {
+  @include commonH2;
+  @include sectionDistance;
 }
 
 // 最新消息動態
-.news{
-  
+.news {
   @include commonH2;
   @include sectionDistance;
-  .nav.nav-tabs{
-    
+  .nav.nav-tabs {
     border-bottom-width: 0;
-    
-    .nav-link{
-      
+
+    .nav-link {
       background-color: rgb(239, 239, 244);
       color: black;
       padding: 10px;
       width: 100px;
       text-align: center;
       font-size: 16px;
-      
 
-      &.active{
+      &.active {
         border-width: 0;
         background-color: $templateColor;
         color: white;
@@ -424,24 +406,23 @@ body.body{
         font-weight: 600;
       }
     }
-
-    
   }
 
-  .tab-content{
-    .newsTable{
-      th:nth-child(1){
+  .tab-content {
+    .newsTable {
+      th:nth-child(1) {
         width: 90px;
         // max-width: 48px;
       }
-      th:nth-child(2){
+      th:nth-child(2) {
         width: calc(100% - 48px);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
 
-      th, td{
+      th,
+      td {
         padding: 10px 0 5px;
         border-top-width: 0;
       }
@@ -450,21 +431,20 @@ body.body{
 }
 
 // 商業贊助
-.businessSupport{
+.businessSupport {
   @include commonH2Style2;
   @include commonH3;
   @include sectionDistance;
 
-  .block{
+  .block {
     text-align: left;
 
-    @media screen and (max-width: $mq576){
+    @media screen and (max-width: $mq576) {
       text-align: center;
     }
   }
 
-  .businessSupportInfo{
-
+  .businessSupportInfo {
     max-width: 210px;
     width: 100%;
     height: auto;
@@ -478,20 +458,19 @@ body.body{
     margin: 0 auto 20px;
     cursor: pointer;
 
-    @media screen and (max-width: $mq576){
+    @media screen and (max-width: $mq576) {
       display: block;
     }
 
-    .img{
-
-      > img{
+    .img {
+      > img {
         max-width: 100%;
         height: auto;
       }
     }
   }
 
-  .businessSupportName{
+  .businessSupportName {
     color: $templateColor;
     margin: 20px 0 0;
     font-size: 16px;
@@ -499,7 +478,7 @@ body.body{
 }
 
 // footer
-.footer{
+.footer {
   position: absolute;
   left: 0;
   right: 0;
@@ -512,25 +491,23 @@ body.body{
   padding: 16px 0;
   color: $templateColor;
   font-weight: 700;
-  
 }
 
 // owl-carousel
-.owl-carousel.owl-carousel{
+.owl-carousel.owl-carousel {
   .item {
     display: inline-block;
     width: 100%;
     height: 100%;
-    img{
+    img {
       width: 100%;
       max-width: 110px;
       margin: 0 auto;
     }
   }
 
-  .owl-nav{
-    
-    @media screen and (max-width: $mq991){
+  .owl-nav {
+    @media screen and (max-width: $mq991) {
       display: block;
       width: 100%;
       max-width: 150px;
@@ -539,7 +516,8 @@ body.body{
       clear: both;
     }
 
-    .owl-prev, .owl-next{
+    .owl-prev,
+    .owl-next {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -549,11 +527,11 @@ body.body{
       height: 80px;
       background-color: $templateColor;
 
-      > *{
+      > * {
         font-size: 30px;
       }
 
-      @media screen and (max-width: $mq991){
+      @media screen and (max-width: $mq991) {
         position: relative;
         transform: none;
         top: 0;
@@ -562,49 +540,48 @@ body.body{
       }
     }
 
-    .owl-prev{
+    .owl-prev {
       left: 0;
       margin: 0 0 0 5px;
 
-      @media screen and (max-width: $mq991){
+      @media screen and (max-width: $mq991) {
         float: left;
       }
     }
-    .owl-next{
+    .owl-next {
       right: 0;
       margin: 0 5px 0 0;
-      @media screen and (max-width: $mq991){
+      @media screen and (max-width: $mq991) {
         float: right;
       }
     }
   }
 
-    .owl-nav{ 
+  .owl-nav {
+    @media screen and (max-width: $mq991) {
+      margin-top: 15px;
+    }
 
-      @media screen and (max-width: $mq991){
-        margin-top: 15px;
-      }
-
-      [class*=owl-]{
-      &:hover{
+    [class*="owl-"] {
+      &:hover {
         transition-property: color, background-color;
-        transition-duration: .3s;
+        transition-duration: 0.3s;
         transition-timing-function: ease;
         background-color: transparent;
 
-        .next{
+        .next {
           color: $templateColor;
 
-          &:hover{
+          &:hover {
             color: $templateColor;
           }
         }
       }
 
-      .next{
+      .next {
         color: white;
 
-        @media screen and (max-width: $mq991){
+        @media screen and (max-width: $mq991) {
           font-size: 20px;
         }
       }
@@ -612,22 +589,22 @@ body.body{
   }
 }
 
-.owl-theme.owl-theme .owl-dots .owl-dot{
+.owl-theme.owl-theme .owl-dots .owl-dot {
   display: none;
-  
-  &.active, &:hover{
-    span{
-      transition: background-color .3s ease;
+
+  &.active,
+  &:hover {
+    span {
+      transition: background-color 0.3s ease;
       background: $templateColor;
     }
   }
 }
 
-
 // typedjs
-.type-wrap{
+.type-wrap {
   h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 100px;
     // position: absolute;
@@ -640,57 +617,66 @@ body.body{
   }
 
   .visually-hidden {
-    position: absolute; 
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    height: 1px; width: 1px; 
-    margin: -1px; padding: 0; border: 0; 
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
   }
 
   /* code for animated blinking cursor */
-  .typed-cursor{
+  .typed-cursor {
     opacity: 1;
     font-weight: 100;
     animation: blink 0.7s infinite;
   }
 
-  @keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
 // 單位...
-.bgcRed{
+.bgcRed {
   background-color: red;
 }
 
-.h100vh{
+.h100vh {
   height: 100vh;
 }
 
-.chooseBeautyColor{
+.chooseBeautyColor {
   color: $templateColor;
 }
 
-.p75-0-50{
+.p75-0-50 {
   padding: 75px 0 50px;
 
-  @media screen and (max-width: $mq576){
+  @media screen and (max-width: $mq576) {
     padding: 0;
   }
 }
 
-.p25-0-50{
+.p25-0-50 {
   padding: 25px 0 50px;
 
-  @media screen and (max-width: $mq576){
+  @media screen and (max-width: $mq576) {
     padding: 0;
   }
 }
 
-.bgSection{
+.bgSection {
   // ;
   background-position: center;
   background-repeat: no-repeat;
@@ -698,7 +684,7 @@ body.body{
   display: block;
 }
 
-.mTERRACEBtn{
+.mTERRACEBtn {
   display: inline-block;
   color: white;
   background-color: $templateColor;
@@ -708,89 +694,102 @@ body.body{
   border-radius: 30px;
   text-align: center;
   padding: 18px 48px;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transition-property: border, background-color;
   transition-timing-function: ease;
   font-size: 16px;
 
-  
-  &:hover{
+  &:hover {
     background-color: transparent;
     border-color: white;
   }
 }
 
-.mt-35x{
+.mt-35x {
   margin-top: 35px;
 }
 
-.mb-50x{
+.mb-50x {
   margin-bottom: 50px;
 }
 
 // 大螢幕向左，1200置中
-.mText-xl-center{
+.mText-xl-center {
   text-align: left;
 
-  @media screen and (max-width: $mq1200){
+  @media screen and (max-width: $mq1200) {
     text-align: center;
   }
 }
 
-.fWeight-800{
+.fWeight-800 {
   font-weight: 800;
 }
 
-.showww{
+.showww {
   visibility: visible !important;
   opacity: 1 !important;
 }
 
-.mt-100x{
+.mt-100x {
   margin-top: 100px;
 }
 
-.mb-5x{
+.mb-5x {
   margin-bottom: 5px;
 }
 
-.fz-25x{
+.fz-25x {
   font-size: 25px;
 }
 
-.fz-21x{
+.fz-21x {
   font-size: 21px;
 }
 
-.text-red{
+.text-red {
   color: red;
 }
 
-.cbColor{
+.cbColor {
   color: $templateColor !important;
 }
 
-.cbBGC{
+.cbBGC {
   background-color: $templateColor !important;
 }
 
-.cbBorder{
+.cbBorder {
   border-color: $templateColor !important;
 }
 
-.o-5{
-  opacity: .5;
+.o-5 {
+  opacity: 0.5;
 }
 
-.cur-default{
+.cur-default {
   cursor: default;
 }
 
-// === 我的錢包 - moneyBag ===
-.moneyBag{
+.cbBtn.cbBtn{
+  text-decoration: none;
+  color: rgba(#404040, 0.8);
+  background-color: $templateColor;
+  border: 2px solid $templateColor;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+// === 我的錢包 - moneyBag ===
+.moneyBag {
   // box外觀
-  @mixin moneyBagBox{
+  @mixin moneyBagBox {
     background-color: white;
     border: 1px solid rgb(230, 230, 230);
     padding: 20px 16px;
@@ -804,64 +803,63 @@ body.body{
   padding-bottom: $footerHeight;
 
   // 個人資訊
-  .personInfo{
+  .personInfo {
     @include moneyBagBox();
     font-size: 16px;
     margin-bottom: 20px;
 
-    
-    >*{
+    > * {
       vertical-align: middle;
     }
 
-    >*:nth-child(1),
-    >*:nth-child(2){
+    > *:nth-child(1),
+    > *:nth-child(2) {
       margin-right: 10px;
     }
 
-    .img{
+    .img {
       max-width: 50px;
       display: inline-block;
 
-      > img{
+      > img {
         width: 100%;
       }
     }
 
-    .name{
+    .name {
       display: inline-block;
       line-height: 46px;
     }
 
-    .focus{
+    .focus {
       display: inline-block;
       // background-color: rgb(255, 104, 249);
-      background-color: #FF68F9;
+      background-color: #ff68f9;
       color: white;
       padding: 2px 10px;
       border-radius: 5px;
       font-size: 15px;
 
-      > *{
+      > * {
         padding-left: 5px;
         font-weight: 700;
       }
     }
 
-    .link{
+    .link {
       margin-top: 20px;
       text-align: center;
 
-      > *{
+      > * {
         cursor: pointer;
         color: $templateColor;
         text-decoration: none;
         background-color: transparent;
-        transition: opacity .3s ease;
+        transition: opacity 0.3s ease;
         padding: 4px 8px;
 
-        &+::before{
-          content: '';
+        & + ::before {
+          content: "";
           height: 10px;
           width: 2px;
           background-color: $templateColor;
@@ -871,108 +869,118 @@ body.body{
           left: -9px;
         }
 
-        &:hover{
+        &:hover {
           opacity: 0.8;
         }
       }
     }
   }
 
-  .points{
+  .points {
     @include moneyBagBox();
     margin-bottom: 20px;
 
-    .fill{
+    .fill {
       text-decoration: none;
-      color: rgba(#404040, .8);
+      color: rgba(#404040, 0.8);
       background-color: $templateColor;
       border: 2px solid $templateColor;
       padding: 2px 8px;
       border-radius: 5px;
       font-size: 16px;
-      transition: background-color .3s ease;
-      
-      &:hover{
+      transition: background-color 0.3s ease;
+
+      &:hover {
         background-color: transparent;
       }
     }
-    
   }
 
-  .pointsConver{
+  .pointsConver {
     @include moneyBagBox();
     margin-bottom: 20px;
     padding: 20px 0 0;
 
-    > *:first-child{
+    > *:first-child {
       padding: 20px 16px;
     }
 
-    .pointsConverArea{
+    .pointsConverArea {
       width: 100%;
       padding: 10px 10px 20px;
       background-color: rgb(242, 242, 242);
       border-radius: 10px;
 
-      .icon{
+      .icon {
         cursor: pointer;
         max-width: 100px;
         color: rgb(111, 103, 119);
         font-size: 12px;
         display: inline-block;
         border-radius: 10px;
-        transition-duration: .3s;
+        transition-duration: 0.3s;
         transition-property: background-color, transform;
         transition-timing-function: ease-out;
-        
-        &:hover{
+
+        &:hover {
           transform: translate(0, -5px);
-          background-color: rgba(255, 255, 255, .8);
+          background-color: rgba(255, 255, 255, 0.8);
         }
 
-        .img{
+        .img {
           width: 100%;
           display: block;
-          margin:0 auto;
+          margin: 0 auto;
           padding: 5px 20px;
 
-          > img{
-            width: 100%
+          > img {
+            width: 100%;
           }
         }
 
-        .name, .point{
+        .name,
+        .point {
           display: block;
           margin: 0 auto;
           text-align: center;
         }
       }
-      
     }
   }
 
-  .record{
+  .record {
     @include moneyBagBox();
   }
-
 }
 // === 我的錢包 - moneyBag ===
 
-// dataTable
-.page-item.active .page-link.page-link{
+// moneyBag - dataTable
+.page-item.active .page-link.page-link {
   border-color: $templateColor;
   background-color: $templateColor;
 }
 
-.page-link.page-link{
+.page-link.page-link {
   color: $templateColor;
 
-  &:focus{
-    box-shadow: 0 0 0 0.2rem rgba($templateColor,.25);
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($templateColor, 0.25);
   }
 }
 
 .table-bordered.table-bordered,
-.table-bordered.table-bordered td, .table-bordered.table-bordered th{
+.table-bordered.table-bordered td,
+.table-bordered.table-bordered th {
   border-width: 0;
+}
+
+// contactUs - 聯絡我們
+.contactUs {
+  padding-top: $headerHeight;
+
+  .title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 }

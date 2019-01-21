@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <% include ClientApp/ejs/index_2/public/headerTag.ejs %>
+  </head>
+  <body class="body">
+    <%- include ClientApp/ejs/index_2/public/style.ejs %>
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var css in
+    htmlWebpackPlugin.files.css) { %>
+    <link
+      href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>"
+      rel="stylesheet"
+    />
+    <% } %> <% } %>
+
+    <%- include ClientApp/ejs/index_2/public/header.ejs %>
+
+
+    <style>
+
+    </style>
+
+    <section class="contactUs">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="title">聯絡我們</h2>
+            <div>
+              <form>
+                <div class="form-group row">
+                  <label for="userName" class="col-sm-2 text-sm-right col-form-label"><span class="text-red">*</span>姓名</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control is-invalid" id="userName" name="userName" placeholder="姓名">
+                    <small id="userNameHelp" class="form-text text-red">為必填寫</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="telePhone" class="col-sm-2 text-sm-right col-form-label"><span class="text-red">*</span>電話</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="telePhone" name="telePhone" placeholder="電話">
+                    <small id="telePhoneHelp" class="form-text text-red">為必填寫</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="EMail" class="col-sm-2 text-sm-right col-form-label"><span class="text-red">*</span>郵件</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="EMail" name="EMail" placeholder="郵件">
+                    <small id="EMailHelp" class="form-text text-red">為必填寫</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="message" class="col-sm-2 text-sm-right col-form-label"><span class="text-red">*</span>內容</label>
+                  <div class="col-sm-10">
+                    <input type="message" class="form-control" id="message" name="message" placeholder="內容">
+                    <small id="messageHelp" class="form-text text-red">為必填寫</small>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary d-block mx-auto mt-4 btn-lg col-4 cbBtn">送出</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+
+
+    <%- include ClientApp/ejs/index_2/public/footer.ejs %>
+    <%- include ClientApp/ejs/index_2/public/script.ejs %>
+
+
+
+    <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
+
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in
+    htmlWebpackPlugin.files.chunks) { %>
+    <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    %>
+    <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <% } %>
+    
+  </body>
+</html>
+
+
