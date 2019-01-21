@@ -78,8 +78,8 @@ module.exports = {
       }),
       new HtmlWebpackPlugin({
         inject: false,
-        template: path.resolve(__dirname, 'ClientApp/ejs/index_2/ContactUs.ejs'),
-        filename: path.resolve(__dirname, 'ContactUs.html'),
+        template: path.resolve(__dirname, 'ClientApp/ejs/index_2/contactUs.ejs'),
+        filename: path.resolve(__dirname, 'contactUs.html'),
         chunks: ['index'],
         HtmlWebpackPluginOverride: true,
         // hash:true,//防止缓存
