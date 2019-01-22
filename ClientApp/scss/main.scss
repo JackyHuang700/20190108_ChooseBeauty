@@ -76,6 +76,57 @@ $footerHeight: 65px;
   padding: 75px 0;
 }
 
+// box外觀
+@mixin moneyBagBox {
+  background-color: white;
+  border: 1px solid rgb(230, 230, 230);
+  padding: 20px 16px;
+  border-radius: 5px;
+  // box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 45px;
+  // box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 30px;
+  box-shadow: rgba(40, 35, 45, 0.2) 0px 4px 6px 0px;
+}
+
+// 禮物
+@mixin commonIcon {
+  .icon {
+    cursor: pointer;
+    max-width: 105px;
+    color: rgb(111, 103, 119);
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    text-decoration: none;
+    transition-property: background-color, transform;
+    transition-timing-function: ease-out;
+    margin-bottom: 5px;
+
+    &:hover {
+      transform: translate(0, -5px);
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .img {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      padding: 5px 20px;
+
+      > img {
+        width: 100%;
+      }
+    }
+
+    .name,
+    .point {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
 *:not(i):not(span) {
   font-family: "Righteous", cursive !important;
 }
@@ -769,8 +820,14 @@ body.body {
 .o-6 {
   opacity: 0.6;
 }
+.o-6 {
+  opacity: 0.6;
+}
+.o-9 {
+  opacity: 0.9;
+}
 
-.w-40p{
+.w-40p {
   width: 40%;
 }
 
@@ -778,7 +835,7 @@ body.body {
   cursor: default;
 }
 
-.cbBtn.cbBtn{
+.cbBtn.cbBtn {
   text-decoration: none;
   color: rgba(#404040, 0.8);
   background-color: $templateColor;
@@ -793,17 +850,35 @@ body.body {
   }
 }
 
-// === 我的錢包 - moneyBag ===
-.moneyBag {
-  // box外觀
-  @mixin moneyBagBox {
-    background-color: white;
-    border: 1px solid rgb(230, 230, 230);
-    padding: 20px 16px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 45px;
+input:focus,
+.form-control:focus.form-control:focus {
+  border-color: $templateColor;
+  box-shadow: 0 0 0 0.2rem rgba($templateColor, 0.55);
+}
+
+.scrollbar {
+  height: 300px;
+  background: transparent;
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f5f5f5;
   }
 
+  &::-webkit-scrollbar {
+    width: 9px;
+    background-color: #f5f5f5;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(85, 85, 85, .2);
+  }
+}
+
+// === 我的錢包 - moneyBag ===
+.moneyBag {
   // height: 97.35%;
   // background-color: #f2f2f2;
   padding-top: $headerHeight;
@@ -827,6 +902,8 @@ body.body {
     .img {
       max-width: 50px;
       display: inline-block;
+      border: 2px solid $templateColor;
+      border-radius: 50%;
 
       > img {
         width: 100%;
@@ -841,7 +918,8 @@ body.body {
     .focus {
       display: inline-block;
       // background-color: rgb(255, 104, 249);
-      background-color: #ff68f9;
+      // background-color: #ff68f9;
+      background-color: rgb(118, 154, 233);
       color: white;
       padding: 2px 10px;
       border-radius: 5px;
@@ -918,40 +996,7 @@ body.body {
       background-color: rgb(242, 242, 242);
       border-radius: 10px;
 
-      .icon {
-        cursor: pointer;
-        max-width: 100px;
-        color: rgb(111, 103, 119);
-        font-size: 12px;
-        display: inline-block;
-        border-radius: 10px;
-        transition-duration: 0.3s;
-        transition-property: background-color, transform;
-        transition-timing-function: ease-out;
-
-        &:hover {
-          transform: translate(0, -5px);
-          background-color: rgba(255, 255, 255, 0.8);
-        }
-
-        .img {
-          width: 100%;
-          display: block;
-          margin: 0 auto;
-          padding: 5px 20px;
-
-          > img {
-            width: 100%;
-          }
-        }
-
-        .name,
-        .point {
-          display: block;
-          margin: 0 auto;
-          text-align: center;
-        }
-      }
+      @include commonIcon();
     }
   }
 
@@ -992,15 +1037,14 @@ body.body {
   }
 }
 
-
 // 前台 - 登入
-.fontLogin{
+.fontLogin {
   height: 100%;
   width: 100%;
   // background-color: #F7F4F4;
-  background-color: #FAEFEF;
+  background-color: #faefef;
 
-  .login{
+  .login {
     background-color: #fff;
     // background-color: #1B589D;
     padding: 20px 30px;
@@ -1009,69 +1053,184 @@ body.body {
     width: 100%;
     box-shadow: rgba(40, 35, 45, 0.2) 0px 0px 10px 0px;
 
-    @media screen and (max-width: $mq767){
+    @media screen and (max-width: $mq767) {
       margin: 0 30px;
     }
 
-    .errorMsg{
+    .errorMsg {
       background-color: rgb(255, 101, 105);
       border-radius: 5px;
       padding: 6px 12px;
-      opacity: .95;
+      opacity: 0.95;
       // max-width: 300px;
       max-width: 200px;
       text-align: center;
       color: white;
     }
 
-
-    .logo{
+    .logo {
       max-width: 85px;
       margin-bottom: 30px;
 
-      > img{
+      > img {
         width: 100%;
       }
     }
 
-    .title{
+    .title {
       font-size: 20px;
       font-weight: 700;
       width: 100%;
       text-align: center;
-      opacity: .5;
+      opacity: 0.5;
       position: relative;
 
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         height: 1px;
         width: 90%;
-        background-color: rgba(169, 164, 176, .2);
+        background-color: rgba(169, 164, 176, 0.2);
         display: block;
       }
     }
 
-    .cbBtn{
+    .cbBtn {
+      transition: all 0.3s ease-out;
 
-      transition: all .3s ease-out;
-
-      &:hover{
+      &:hover {
         border-color: $templateColor;
         background-color: $templateColor;
         color: rgba(#404040, 0.8);
-        opacity: .8;
+        opacity: 0.8;
       }
     }
-
   }
 }
 
-input:focus,
-.form-control:focus.form-control:focus{
-  border-color: $templateColor;
-  box-shadow: 0 0 0 0.2rem rgba($templateColor, .55);
+// 佳麗個人網頁 - 個人動態
+.prettyWomanSelfStatus {
+  padding-top: $headerHeight;
+  padding-bottom: $footerHeight;
+  height: 100%;
+  width: 100%;
+
+  // 個人資訊
+  .personInfo {
+    @include moneyBagBox();
+    font-size: 16px;
+    margin-bottom: 20px;
+
+    > * {
+      vertical-align: middle;
+    }
+
+    > *:nth-child(1),
+    > *:nth-child(2) {
+      margin-right: 10px;
+    }
+
+    .logo {
+      border-radius: 5px;
+      max-width: 100px;
+      display: block;
+      margin: 0 auto 20px 0;
+    }
+
+    .img {
+      max-width: 55px;
+      display: inline-block;
+      border: 2px solid $templateColor;
+      border-radius: 50%;
+
+      > img {
+        width: 100%;
+      }
+    }
+
+    .name {
+      display: inline-block;
+      line-height: 46px;
+    }
+
+    .introduction {
+      margin-top: 20px;
+      height: 100px;
+      overflow: auto;
+      
+      > *{
+        opacity: 0.4;
+      }
+    }
+  }
+
+  // 相片簿
+  .photos {
+    @include moneyBagBox();
+    font-size: 16px;
+    margin-bottom: 20px;
+
+    .title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .photo {
+      .img {
+        margin-right: 10px;
+        max-width: 92px;
+        display: inline-block;
+        transition: transform 0.3s ease-out;
+
+        &:hover {
+          transform: translateY(-1px);
+        }
+
+        > img {
+          width: 100%;
+        }
+      }
+    }
+
+   
+
+    .readMove {
+      float: right;
+      text-decoration: none;
+      font-size: 8px;
+      padding-top: 4px;
+    }
+  }
+
+  // 個人動態
+  .blog {
+    @include moneyBagBox();
+    padding: 24px;
+    margin-bottom: 15px;
+    
+    .content {
+      font-size: 17px;
+    }
+
+    .action {
+      margin-bottom: 10px;
+    }
+
+    .giftArea {
+      height: auto;
+      max-height: 250px;
+      padding: 12px 24px;
+      margin: 0 -24px -25px;
+      background-color: #f2f2f2;
+      overflow: auto;
+
+      .gift{
+        @include commonIcon();
+      }
+    }
+  }
 }
