@@ -894,7 +894,9 @@ input:focus,
 }
 
 // === 我的錢包 - moneyBag ===
-.moneyBag {
+// === 收禮紀錄 - giftRecord ===
+.moneyBag,
+.giftRecord {
   // height: 97.35%;
   // background-color: #f2f2f2;
   padding-top: $headerHeight;
@@ -1247,6 +1249,18 @@ input:focus,
       .gift{
         @include commonIcon();
       }
+    }
+  }
+}
+
+
+// 收禮紀錄
+.giftRecord{
+  .gift{
+    max-width: 80px;
+
+    > img{
+      width: 100%;
     }
   }
 }
