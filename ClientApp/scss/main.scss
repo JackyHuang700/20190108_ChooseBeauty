@@ -893,6 +893,10 @@ input:focus,
   right: 12px;
 }
 
+.dropdown-menu.dropdown-menu.show.show{
+  display: block;
+}
+
 // === 我的錢包 - moneyBag ===
 // === 收禮紀錄 - giftRecord ===
 .moneyBag,
