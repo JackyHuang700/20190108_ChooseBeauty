@@ -127,8 +127,18 @@ $footerHeight: 65px;
   }
 }
 
+// Google Noto Sans CJK TC，思源黑體
+@font-face {
+  font-family: 'Noto Sans TC-Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
+}
+
 *:not(i):not(span) {
-  font-family: "Righteous", cursive !important;
+  font-family: 'Noto Sans TC-Light' !important;
 }
 
 html {
