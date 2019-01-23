@@ -46,7 +46,7 @@
                 <div>
                   點數: <span class="cbColor">1000</span>點
                 </div>
-                <a class="fill" href="#">充值</a> 
+                <a class="fill" href="#" data-toggle="modal" data-target="#exampleModal2">充值</a> 
               </div>
               <div>
                 <span class="text-red">1</span>&nbsp;新台幣相當於&nbsp;<span class="text-red">1</span>&nbsp;點
@@ -93,35 +93,68 @@
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">選擇數量</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              
-              <div class="form-group row">
-                  <label class="col-sm-2" for="number">數量</label>
-                  <div class="col-sm-10">
-                    <select class="custom-select" id="number">
-                      <option selected value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select>
-                </div>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header align-self-center">
+            <h5 class="modal-title fa-2x" id="exampleModalLabel">選擇數量</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <div class="form-group row">
+                <label class="col-sm-2 text-right mb-0 align-self-center" for="number">數量</label>
+                <div class="col-sm-10">
+                  <select class="custom-select" id="number">
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
               </div>
+            </div>
 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-              <button type="button" class="btn btn-primary col-2 cbBGC cbBorder">確認</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            <button type="button" class="btn btn-primary col-2 cbBGC cbBorder">確認</button>
           </div>
         </div>
       </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header align-self-center">
+            <h5 class="modal-title fa-2x" id="exampleModalLabel2">點數儲值</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <div class="form-group row">
+                <label class="col-sm-2 text-right mb-0 align-self-center" for="number">數量</label>
+                <div class="col-sm-10">
+                  <select class="custom-select" id="number">
+                    <option selected value="120">120</option>
+                    <option value="600">600</option>
+                    <option value="1300">1300</option>
+                  </select>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            <button type="button" class="btn btn-primary col-2 cbBGC cbBorder">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <%- include ClientApp/ejs/index_2/public/footer.ejs %>

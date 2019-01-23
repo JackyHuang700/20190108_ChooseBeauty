@@ -877,6 +877,12 @@ input:focus,
   }
 }
 
+.close.close{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
 // === 我的錢包 - moneyBag ===
 .moneyBag {
   // height: 97.35%;

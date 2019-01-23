@@ -1,4 +1,110 @@
-<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>mTerrace</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="keywords" content="mTerrace,泰睿思,企業資源行動流程解決方案"><meta name="description" content=""><meta name="author" content="mTERRACE"><meta name="copyright" content="mTERRACE"><meta name="URL" content="https://www.mterrace.com.tw/"></head><body class="body"><link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"><link href="wwwroot/webpackTest/index.css" rel="stylesheet"><header class="header stricky"><nav class="navbar navbar-expand-lg navbar-light"><a class="navbar-brand logo" href="index.html"><img src="wwwroot/images/mTERRACELogo.png" alt="mTERRACE"></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent"><ul class="navbar-nav"><li class="nav-item active"><a class="nav-link" href="index.html">首頁<span class="sr-only">(current)</span></a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DemoPage</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="moneyBag.html">我的錢包</a><a class="dropdown-item" href="contactUs.html">聯絡我們</a><a class="dropdown-item" href="fontLogin.html">前台登入</a><a class="dropdown-item" href="prettyWomanSelfStatus.html">佳麗個人網頁-個人動態</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle account" href="#" id="account" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="accountName">mTERRACE</span><div class="accountImg"><img class="rounded-circle" src="https://picsum.photos/100/100?image=1027" alt=""></div></a><div class="dropdown-menu text-center" aria-labelledby="account"><a class="dropdown-item" href="#"><button class="mTERRACEBtn">退出</button></a><a class="dropdown-item" href="#"><div class="accountImg"><img class="rounded-circle" src="https://picsum.photos/100/100?image=1027" alt=""></div></a><a class="dropdown-item" href="#">&nbsp;<span class="fWeight-800 cur-default">mTERRACE</span></a><a class="dropdown-item font" href="#">個人中心</a><a class="dropdown-item font" href="#">我的錢包</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="selectLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">語言</a><div class="dropdown-menu" aria-labelledby="selectLang"><a class="dropdown-item" href="#">中文</a><a class="dropdown-item" href="#">English</a></div></li></ul></div></nav></header><link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"><style>#example_length {
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+<title>mTerrace</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="keywords" content="mTerrace,泰睿思,企業資源行動流程解決方案">
+<meta name="description" content="">
+<meta name="author" content="mTERRACE">
+<meta name="copyright" content="mTERRACE">
+<meta name="URL" content="https://www.mterrace.com.tw/"> 
+  </head>
+  <body class="body">
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<!-- owlcarousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    
+
+    <header class="header stricky">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand logo" href="index.html">
+          <img src="wwwroot/images/mTERRACELogo.png" alt="mTERRACE">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                DemoPage
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="moneyBag.html">我的錢包</a>
+                <a class="dropdown-item" href="contactUs.html">聯絡我們</a>
+                <a class="dropdown-item" href="fontLogin.html">前台登入</a>
+                <a class="dropdown-item" href="prettyWomanSelfStatus.html">佳麗個人網頁-個人動態</a>
+                <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle account" href="#" id="account" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="accountName">mTERRACE</span>
+                <div class="accountImg">
+                  <img class="rounded-circle" src="https://picsum.photos/100/100?image=1027" alt="">
+                </div>
+              </a>
+              <div class="dropdown-menu text-center" aria-labelledby="account">
+                <a class="dropdown-item" href="#">
+                    <button class="mTERRACEBtn">退出</button>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <div class="accountImg">
+                    <img class="rounded-circle" src="https://picsum.photos/100/100?image=1027" alt="">
+                  </div>
+                </a>
+                <a class="dropdown-item" href="#">
+                  &nbsp;<span class="fWeight-800 cur-default">mTERRACE</span>
+                </a>
+                <a class="dropdown-item font" href="#">個人中心</a>
+                <a class="dropdown-item font" href="#">我的錢包</a>
+              </div>
+            </li>
+            <!-- https://codepen.io/raubaca/pen/VejpQP -->
+            <!-- <li class="nav-item">
+                <select class="form-control">
+                  <option selected>中文</option>
+                  <option>English</option>
+                </select>
+            </li> -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="selectLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  語言
+                </a>
+                <div class="dropdown-menu" aria-labelledby="selectLang">
+                  <a class="dropdown-item" href="#">中文</a>
+                  <a class="dropdown-item" href="#">English</a>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </nav>
+</header>
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
+    <style>
+        #example_length {
           display: none;
         }
   
@@ -10,7 +116,180 @@
         #example thead{
           background-color: #eeb118;
           text-align: center;
-        }</style><section class="moneyBag"><div class="container"><div class="row"><div class="col-12 text-center fz-25x mb-4">我的錢包</div><div class="col-md-4"><div class="personInfo align-self-start"><div class="img"><img class="rounded-circle" src="https://picsum.photos/100/100?image=1027" alt=""></div><div class="name">暱稱</div><div class="focus">關注:<span>100</span></div><div class="link"><a href="#">個人中心</a><a href="#">我的錢包</a></div></div></div><div class="col-md-8"><div class="points"><div class="text-center fz-21x">我的點數</div><div class="mb-5x d-flex justify-content-between align-items-center"><div>點數:<span class="cbColor">1000</span>點</div><a class="fill" href="#">充值</a></div><div><span class="text-red">1</span>&nbsp;新台幣相當於&nbsp;<span class="text-red">1</span>&nbsp;點</div></div><div class="pointsConver"><div class="text-center fz-21x">點數換算</div><div class="pointsConverArea"><div class="icon" data-toggle="modal" data-target="#exampleModal"><span class="img"><img src="https://picsum.photos/100/100?image=1040" alt=""></span><span class="name mt-1">來親幾哩</span><span class="point mt-1">50</span></div></div></div><div class="record"><div class="text-center fz-21x">使用紀錄</div><div><table id="example" class="table table-striped table-bordered" style="width:100%"><thead><tr><th class="o-5">時間</th><th class="o-5">交易類型</th><th class="o-5">數量</th></tr></thead><tbody><tr><td>2019-01-16</td><td>支付寶</td><td>1</td></tr></tbody></table></div></div></div></div></div></section><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">選擇數量</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="form-group row"><label class="col-sm-2" for="number">數量</label><div class="col-sm-10"><select class="custom-select" id="number"><option selected="selected" value="1">1</option><option value="2">2</option><option value="3">3</option></select></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button><button type="button" class="btn btn-primary col-2 cbBGC cbBorder">確認</button></div></div></div></div><footer class="footer text-center">Copyright © 2019 泰睿思股份有限公司 版權所有</footer><div class="scrollToTop scroll-to-target"><i class="fas fa-angle-up"></i></div><script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script><script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script><script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/typed.min.js"></script><script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script><script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script><script>$( document ).ready(function() {
+        }
+      </style>
+
+    <section class="moneyBag">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center fz-25x mb-4">我的錢包</div>
+          <!-- 我得帳戶 -->
+<div class="col-md-4">
+  <div class="personInfo align-self-start">
+    <div class="img">
+      <!-- <img src="" alt=""> -->
+      <img class="rounded-circle" src="https://picsum.photos/100/100?image=1027" alt="">
+    </div>
+    <div class="name">暱稱</div>
+    <div class="focus">
+      關注: <span>100</span>
+    </div>
+    <div class="link">
+      <a href="#">個人中心</a>
+      <a href="#">我的錢包</a>
+    </div>
+  </div>
+</div>
+          <div class="col-md-8">
+            <div class="points">
+              <div class="text-center fz-21x">我的點數</div>
+              <div class="mb-5x d-flex justify-content-between align-items-center">
+                <div>
+                  點數: <span class="cbColor">1000</span>點
+                </div>
+                <a class="fill" href="#" data-toggle="modal" data-target="#exampleModal2">充值</a> 
+              </div>
+              <div>
+                <span class="text-red">1</span>&nbsp;新台幣相當於&nbsp;<span class="text-red">1</span>&nbsp;點
+              </div>
+            </div>
+            <div class="pointsConver">
+              <div class="text-center fz-21x">點數換算</div>
+              <div class="pointsConverArea">
+                <div class="icon" data-toggle="modal" data-target="#exampleModal">
+                  <span class="img">
+                    <img src="https://picsum.photos/100/100?image=1040" alt="">
+                  </span>
+                  <span class="name mt-1">來親幾哩</span>
+                  <span class="point mt-1">50</span>
+                </div>
+                
+              </div>
+            </div>
+            <div class="record">
+              <div class="text-center fz-21x">使用紀錄</div>
+              <div>
+                  <table id="example" class="table table-striped table-bordered" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th class="o-5">時間</th>
+                      <th class="o-5">交易類型</th>
+                      <th class="o-5">數量</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2019-01-16</td>
+                      <td>支付寶</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header align-self-center">
+            <h5 class="modal-title fa-2x" id="exampleModalLabel">選擇數量</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <div class="form-group row">
+                <label class="col-sm-2 text-right mb-0 align-self-center" for="number">數量</label>
+                <div class="col-sm-10">
+                  <select class="custom-select" id="number">
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            <button type="button" class="btn btn-primary col-2 cbBGC cbBorder">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header align-self-center">
+            <h5 class="modal-title fa-2x" id="exampleModalLabel2">點數儲值</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <div class="form-group row">
+                <label class="col-sm-2 text-right mb-0 align-self-center" for="number">數量</label>
+                <div class="col-sm-10">
+                  <select class="custom-select" id="number">
+                    <option selected value="120">120</option>
+                    <option value="600">600</option>
+                    <option value="1300">1300</option>
+                  </select>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            <button type="button" class="btn btn-primary col-2 cbBGC cbBorder">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- And here is our main footer that is used across all the pages of our website -->
+<footer class="footer text-center">
+    Copyright © 2019 泰睿思股份有限公司 版權所有
+</footer>
+
+
+<!-- goto -->
+<div class="scrollToTop scroll-to-target">
+  <!-- <span class="fas fa-angle-up"></span> -->
+  <i class="fas fa-angle-up"></i>
+</div>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- owlcarousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- particles -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- sfd -->
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/typed.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+      $( document ).ready(function() {
         var myMoexampleModaldalDOM =  $('#exampleModal')
         myMoexampleModaldalDOM.on('shown.bs.modal', function (e) {
           console.log('do something...')
@@ -32,4 +311,17 @@
               }
             }
           })
-      });</script><script src="wwwroot/vendor/dll.vendor.js"></script><script src="wwwroot/webpackTest/index.bundle.7819507b.js"></script></body></html>
+      });
+     
+    </script>
+
+    <script src="wwwroot/vendor/dll.vendor.js"></script>
+
+     
+    <script src="http://localhost:8080/index.bundle.js"></script>
+     
+    
+  </body>
+</html>
+
+
