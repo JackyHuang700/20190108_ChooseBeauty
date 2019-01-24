@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <% include ClientApp/ejs/index_2/public/headerTag.ejs %>
+  </head>
+  <body class="body">
+    <%- include ClientApp/ejs/index_2/public/style.ejs %>
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var css in
+    htmlWebpackPlugin.files.css) { %>
+    <link
+      href="wwwroot/webpackTest<%= htmlWebpackPlugin.files.css[css] %>"
+      rel="stylesheet"
+    />
+    <% } %> <% } %>
+
+    <%- include ClientApp/ejs/index_2/public/header.ejs %>
+
+
+
+    <section class="blogManagement">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center fz-25x mb-4 title font-weight-bold">網誌管理</h2>
+          </div>
+          <div class="col-12 text-right mb-3">
+            <a href="" class="btn col-2 cbBGC cbBorder">建立網誌</a>
+          </div>
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-12">
+                <div class="personInfo align-self-start">
+                  <%- include ClientApp/ejs/index_2/public/account.ejs %>
+                  <div class="link">
+                    <a href="#">個人中心</a>
+                    <a href="#">紛絲數據</a>
+                    <a href="#">收禮紀錄</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-12">
+                <div class="articleList">
+                  <div class="article">
+                    <div class="title">title</div>
+                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nihil illum maiores nisi reprehenderit aliquid dolores praesentium dignissimos laboriosam sapiente aperiam, laudantium, tempora repudiandae ad, voluptas porro reiciendis dolore molestias.</div>
+                  </div>
+                  <div class="article">
+                    <div class="title">title</div>
+                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nihil illum maiores nisi reprehenderit aliquid dolores praesentium dignissimos laboriosam sapiente aperiam, laudantium, tempora repudiandae ad, voluptas porro reiciendis dolore molestias.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+
+
+    <%- include ClientApp/ejs/index_2/public/footer.ejs %>
+    <%- include ClientApp/ejs/index_2/public/script.ejs %>
+
+
+
+    <script src="<%= htmlWebpackPlugin.options.outputFile.vendor %>"></script>
+
+    <%if (htmlWebpackPlugin.options.outputFile.isProd) {%> <% for (var chunk in
+    htmlWebpackPlugin.files.chunks) { %>
+    <script src="wwwroot/webpackTest<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <%} else {%> <% for (var chunk in htmlWebpackPlugin.files.chunks) {
+    %>
+    <script src="http://localhost:<%= htmlWebpackPlugin.options.outputFile.port %><%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %> <% } %>
+    
+  </body>
+</html>
+
+
