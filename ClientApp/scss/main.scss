@@ -41,10 +41,10 @@ $footerHeight: 65px;
     content: "";
     display: inline-block;
     width: 5px;
-    height: 65%;
+    height: 80%;
     margin-right: 6px;
     background-color: $templateColor;
-    vertical-align: text-bottom;
+    vertical-align: top;
     // @media screen and (max-width: $mq576){
     // width: 40%;
     // }
@@ -845,7 +845,7 @@ body.body {
   cursor: default;
 }
 
-.cbBtn.cbBtn {
+.cbBtn.cbBtn.cbBtn.cbBtn.cbBtn.cbBtn.cbBtn.cbBtn {
   text-decoration: none;
   color: rgba(#404040, 0.8);
   background-color: $templateColor;
@@ -855,8 +855,15 @@ body.body {
   font-size: 16px;
   transition: background-color 0.3s ease;
 
-  &:hover {
+  &:hover,
+  &:active {
     background-color: transparent;
+    border-color: $templateColor;
+    color:  rgba(#404040, 0.8);
+  }
+
+  &:focus{
+    box-shadow: 0 0 0 0.2rem rgba($templateColor,.5);
   }
 }
 
@@ -865,6 +872,12 @@ input:focus,
 .custom-select.custom-select:focus {
   border-color: $templateColor;
   box-shadow: 0 0 0 0.2rem rgba($templateColor, 0.55);
+}
+
+
+
+:focus:focus{
+  outline-color: transparent;
 }
 
 .custom-control-input.custom-control-input:checked~.custom-control-label.custom-control-label::before{
